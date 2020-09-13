@@ -5,8 +5,8 @@ header-img: img/home-bg.jpg
 email: denglinsui@gmail.com
 description: "关于统计与学习 | 邓淋穗，ph.d candiadate| 这里是 @Linsui邓淋穗 的读书笔记。"
 keyword: "邓淋穗, Linsui邓淋穗, Linsui Deng, denglinsui, Statistics, R, C++, python"
-url: "https://denglinsui.github.io/reading-note"              # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+url: "https://denglinsui.github.io/reading-note/"              # your host, for absolute URL
+baseurl: "https://denglinsui.github.io/reading-note/"      # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
