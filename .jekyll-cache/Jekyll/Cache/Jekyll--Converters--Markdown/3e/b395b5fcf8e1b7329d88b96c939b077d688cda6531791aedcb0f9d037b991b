@@ -1,0 +1,112 @@
+I"+<h1 id="karhunen-loeve-expansion">Karhunen-Loeve Expansion</h1>
+
+<blockquote>
+  <p>Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/02.pdf" target="_blank">「Stochastics Process」2 Karhunen-Loeve Expansion</a>.</p>
+</blockquote>
+
+<h2 id="linear-time-invariant-filters">Linear time invariant filters</h2>
+
+<h2 id="principle-component">Principle Component</h2>
+
+<p><strong>Goal</strong>: Specify a few values, <em>principle component</em>, in order to reconstruct almost the entire outcome of the full vector.</p>
+
+<p>Given random vector $\mathbf{x}=(x_1,\cdots,x_n)^\top$ with mean zero and covariance matrix $\Sigma=\mathbb{E}(xx^\top)$ with eigenvalues $\lambda_1\geq\lambda_2\geq\cdots\lambda_n&gt;0$ and orthonormal eigen vectors $p_k$.</p>
+
+<p>With these assumptions, we want to find random variables $z_1,\cdots,z_n$ with mean zero and covariance matrix $\mathbf{I}_n$. The specific expression of $z_k$ is
+\(z_{k}=\frac{1}{\sqrt{\lambda_{k}}} \mathbf{p}_{k}^{\prime} \mathbf{x}\)
+The <strong>principle component</strong> of $\mathbf{x}$ is $y_k=\sqrt{\lambda_k}z_k$, or $\mathbf{y}=\mathbf{PX}$. It analogies to the eigenvector in the linear algebra.</p>
+
+<p>Similarly, the original x-variables can be expressed as a linear combination of the uncorrelated variables $y_k$ and $z_k$:
+\(x_{k}=\mathbf{p}_{k}^{\prime} \mathbf{y}=\sum_{j=1}^{n} \sqrt{\lambda_{j}} p_{j k} z_{j}\)</p>
+
+<p>## Expansion along eigenfunctions</p>
+
+<h3 id="comparison-with-finite-dimension">Comparison with Finite Dimension</h3>
+
+<p>Here, we generalize the orthogonormality and eigenvectors in functional space.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: center">fINITE dIMENSION</th>
+      <th style="text-align: center">iNFINITE dIMENSION</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>orthogonal</td>
+      <td style="text-align: center">$\sum p_i\overline{q_i}=0$</td>
+      <td style="text-align: center">$\int_a^b c(t)\overline{d(t)}dt=0$</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>normal</td>
+      <td style="text-align: center">$\sum</td>
+      <td style="text-align: center">p_i</td>
+      <td>^2=1$</td>
+      <td>$\int_a^b</td>
+      <td>c(t)</td>
+      <td>^2dt=1$</td>
+    </tr>
+    <tr>
+      <td>eigen component</td>
+      <td style="text-align: center">$\boldsymbol{\Sigma} \mathbf{p}=\lambda\mathbf{p}$</td>
+      <td style="text-align: center">$\int_{a}^{b} r(s, t) c(t) \mathrm{d} t=\lambda c(s)$</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="decomposition">Decomposition</h3>
+
+<p>Consider an one continuous parameter stochastic process $x(t), t\in[a,b]$. Similarly, we want to find the orthonormal basis for $\mathcal{H}(x)$, which satisfies
+\(\begin{aligned}
+x(t) &amp;=\sum_{k} c_{k}(t) z_{k} \\
+r(s, t) &amp;=\sum_{k} c_{k}(s) \overline{c_{k}(t)}
+\end{aligned}\)
+To achieve this,</p>
+
+<ul>
+  <li>Firstly, find eigen functions $c_k(t)$ according to covariance function $r(s,t)$.</li>
+  <li>Then, $z_k$’s are obtained by $z_{k}=\frac{1}{\lambda_{k}} \int_{a}^{b} \overline{c_{k}(t)} x(t) \mathrm{d} t$</li>
+  <li>The orthonormal eigenfunctions are $\phi_{j}(t)=\frac{1}{\sqrt{\lambda_{j}}} c_{j}(t)$</li>
+</ul>
+
+<p>The optimal choice is minimizing integrated approximation error
+\(\int_{a}^{b} E\left(e_{n}^{2}(t)\right) \mathrm{d} t=\int_{a}^{b} E\left(x^{2}(t)\right) \mathrm{d} t-\sum_{0}^{n} \lambda_{k}\)
+Actually, we wish it converges to zero uniformly.</p>
+
+<h2 id="the-karhunen-loève-theorem">The Karhunen-Loève theorem</h2>
+
+<h4 id="the-karhunen-loève-theorem-1">The Karhunen-Loève theorem</h4>
+
+<p>Let ${x(t), a \leq t \leq b}$ be continuous in quadratic mean with mean zero and covariance function $r(s, t)=E(x(s) \overline{x(t)})$. Then there exist orthonormal eigenfunctions $\phi_{k}(t), k=0,1, \ldots, N \leq$ $\infty,$ for $a \leq t \leq b,$ with eigenvalues $\lambda_{0} \geq \lambda_{1} \geq \ldots,$ to the equation
+\(\int_{a}^{b} r(s, t) \phi(t) \mathrm{d} t=\lambda \phi(s)\)
+such that the random variables $z_{k}=\frac{1}{\sqrt{\lambda_{k}}} \int_{a}^{b} \overline{\phi_{k}(t)} x(t)dt$  are uncorrelated, $V\left(z_{k}\right)=1,$ and can represent $x(t)$ as
+\(x(t)=\sum_{0}^{\infty} \sqrt{\lambda_{k}} \phi_{k}(t) z_{k}\)
+<u>Note</u>: We can also express $x(t)$ as this $x(t)=\sum_{0}^{\infty} \sqrt{\lambda_{k}} \phi_{k}(t) z_{k}=\sum_{0}^{\infty} \int_a^b\overline{\phi_{k}(t)}x(t) dt\ \phi_{k}(t)$. In this way, the orthonormal term is $\phi_k(t)$.</p>
+
+<h3 id="optimality-of-the-karhunen-loève-expansion">Optimality of the Karhunen-Loève expansion</h3>
+
+<p>If $\psi_{k}(t), k=0,1, \ldots,$ is any sequence of functions and $y_{k} \in \mathscr{H}(x)$
+are uncorrelated random variables, then, for each $n$
+\(\int_{a}^{b} E\left(\left|x(t)-\sum_{0}^{n} \sqrt{\lambda_{k}} \phi_{k}(t) z_{k}\right|^{2}\right) \mathrm{d} t \leq \int_{a}^{b} E\left(\left|x(t)-\sum_{0}^{n} \psi_{k}(t) y_{k}\right|^{2}\right) \mathrm{d} t\)</p>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li><a href="https://www.amazon.com/Stationary-Stochastic-Processes-Applications-Statistical/dp/1466557796">Stationary Stochastic Processes: Theory and Applications</a></li>
+</ul>
+
+:ET

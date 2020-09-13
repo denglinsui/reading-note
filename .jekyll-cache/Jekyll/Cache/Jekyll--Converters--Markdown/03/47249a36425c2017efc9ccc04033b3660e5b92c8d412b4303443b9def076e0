@@ -1,0 +1,27 @@
+I"�<h1 id="latex-pakage-installation">Latex Pakage Installation</h1>
+
+<p><strong>安装环境</strong>： Windows 10 + MiKTeX+TexStudio</p>
+
+<p>有时候会因为网络的问题，在引入新的宏包的时候，自动安装会出错。</p>
+
+<p>接下来是安装的方法：</p>
+
+<h2 id="方法一">方法一</h2>
+
+<ul>
+  <li>打开 <strong>MiKTeX Console</strong></li>
+  <li>选择 <strong>Packages</strong></li>
+  <li>官方的package就能直接在里面下载啦</li>
+</ul>
+
+<h2 id="方法二">方法二</h2>
+
+<ul>
+  <li>在<a href="https://www.ctan.org/pkg">Latex宏包网站</a>中下载所需要的包xxx并进行解压</li>
+  <li>在cmd中进入解压目录</li>
+  <li>运行<code class="language-plaintext highlighter-rouge">latex xxx.ins</code>就会生成相应的lsy文件 或者  运行<code class="language-plaintext highlighter-rouge">tex xxx.dtx</code>就会生成相应的lsy文件</li>
+  <li>将对应文件夹移到包的文件夹位置<code class="language-plaintext highlighter-rouge">...\mitex\tex\latex</code></li>
+  <li>最后在<strong>MiKTeX Console</strong>中选择<code class="language-plaintext highlighter-rouge">Refresh Database</code></li>
+</ul>
+
+:ET

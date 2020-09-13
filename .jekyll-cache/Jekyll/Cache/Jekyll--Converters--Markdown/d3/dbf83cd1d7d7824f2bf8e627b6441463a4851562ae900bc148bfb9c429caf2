@@ -1,0 +1,62 @@
+I"q<h1 id="latex-bibliography">Latex Bibliography</h1>
+
+<p>记录一下在LaTeX中引用参考文献的方法。</p>
+
+<h2 id="方法一">方法一</h2>
+
+<p>在一些引用工作比较少的情况下，一个比较简单的方法是直接在最后加入代码：</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nt">\begin{thebibliography}</span><span class="p">{</span>99<span class="p">}</span>  
+	<span class="k">\bibitem</span><span class="p">{</span>author1<span class="p">}</span>author1, author2...
+<span class="nt">\end{thebibliography}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>之后再用<code class="language-plaintext highlighter-rouge">\cite{}</code>来引用。</p>
+
+<h2 id="方法二">方法二</h2>
+
+<p>在引用量较多，并且需要根据不同的需要更改模式的情况下，利用BibTeX来帮助管理文献。</p>
+
+<ul>
+  <li>
+    <p>在Google Scholar或者其他网站上获取bib格式/endnote格式的引用数据；</p>
+  </li>
+  <li>
+    <p>创建<code class="language-plaintext highlighter-rouge">.bib</code>后缀文件来存储参考文献，将获取的文献数据加入其中，如<code class="language-plaintext highlighter-rouge">mybibtex.bib</code>；</p>
+  </li>
+  <li>
+    <p>最后在文件结束前加入</p>
+
+    <div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">\bibliographystyle</span><span class="p">{</span>plain<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>mybibtex<span class="p">}</span> 
+</pre></td></tr></tbody></table></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><em>Note</em>：这里的<code class="language-plaintext highlighter-rouge">plain</code>指的是参考文献呈现的格式，如果对应需要得到符合某期刊的参考文献格式，需要得到对应的<code class="language-plaintext highlighter-rouge">bst</code>文件，并采用这种格式。</p>
+
+<h2 id="endnote导出bib文件">Endnote导出bib文件</h2>
+
+<ul>
+  <li>采用顺序<code class="language-plaintext highlighter-rouge">Edit-&gt;Output Styles-&gt;Open Style Manager-&gt;Chose BibTex Export；</code></li>
+  <li>在<code class="language-plaintext highlighter-rouge">Output Style</code>中可以选取<code class="language-plaintext highlighter-rouge">BibTeX Export</code>作为默认输出，或者在<code class="language-plaintext highlighter-rouge">Export</code>中选择<code class="language-plaintext highlighter-rouge">BibTeX Export</code>；</li>
+  <li>导出的时候label是按照导入顺序编号的，如果需要改的话，在<code class="language-plaintext highlighter-rouge">Edit-&gt;Output Styles</code>来编辑输出格式：
+    <ul>
+      <li>如果在保存的时候，一直出现<code class="language-plaintext highlighter-rouge">save as</code>，更改<code class="language-plaintext highlighter-rouge">Edit-&gt;Preference-&gt;Folder Locations-&gt;Style Folder</code>存储的位置，不要存储在默认位置；</li>
+      <li>可以将<code class="language-plaintext highlighter-rouge">Label</code>作为引用时需要的label。</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="references">References</h1>
+
+<ul>
+  <li>https://www.cnblogs.com/parrynee/archive/2010/03/02/1676369.html</li>
+  <li>https://www.overleaf.com/learn/latex/Bibliography_management_with_natbib</li>
+</ul>
+:ET

@@ -1,0 +1,272 @@
+I"ln<h1 id="slice-sampling-implication">Slice Sampling: Implication</h1>
+
+<p>Library Pakages:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span><span class="n">set.seed</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="generate-from-the-density">Generate from the density</h2>
+
+<p>Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x&gt;0)$:</p>
+
+<ul>
+  <li>$U\mid x \sim \mathcal{U}\left(0, \frac{1}{2} e^{-\sqrt{x}}\right)$;</li>
+  <li>$X\mid u \sim \mathcal{U}\left(0,[\log (2 u)]^{2}\right)$</li>
+</ul>
+
+<p>Define the maximum value of the uniform distribution.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="n">f_x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">/</span><span class="m">2.0</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">g_u</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">u</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">((</span><span class="nf">log</span><span class="p">(</span><span class="m">2.0</span><span class="o">*</span><span class="n">u</span><span class="p">))</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Generate the samples.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c1"># Set the generation rounds and initial value</span><span class="w">
+</span><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">500</span><span class="w">
+</span><span class="n">X_U</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">),</span><span class="n">U</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">))</span><span class="w">
+</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+
+</span><span class="c1"># Sampling Procedure</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="n">times</span><span class="p">)){</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">max</span><span class="o">=</span><span class="n">f_x</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="m">-1</span><span class="p">]))</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">max</span><span class="o">=</span><span class="n">g_u</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Plot the result:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">X_U</span><span class="o">$</span><span class="n">U_line</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">f_x</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">)</span><span class="w">
+    
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">X_U</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">U</span><span class="p">),</span><span class="n">colour</span><span class="o">=</span><span class="s2">"#6495ED"</span><span class="p">,</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">U_line</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/img/in-post/Bayesian/sample12-1.png" alt="" /></p>
+
+<h2 id="generate-from-the-truncated-normal-density">Generate from the truncated normal density</h2>
+
+<p>Our target density is: $f(x) \propto f_{1}(x)=\exp {-(x+3)^{2} / 2} \mathbb{I}_{[0,1]}(x)$</p>
+
+<ul>
+  <li>$U\mid x \sim \mathcal{U}\left(0, \exp {-(x+3)^{2} / 2}\right)$</li>
+  <li>$X\mid u\sim{y ; \exp {-(y+3)^{2} / 2} \geq u}\cap[0,1]$</li>
+</ul>
+
+<p>Define the specific values for generating the uniform distribution.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="n">f_x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="m">+3</span><span class="p">)</span><span class="o">^</span><span class="m">2</span><span class="o">/</span><span class="m">2.0</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">g_u</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">u</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="m">-2</span><span class="o">*</span><span class="nf">log</span><span class="p">(</span><span class="n">u</span><span class="p">)))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Generate the samples.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="c1"># Set the generation rounds and initial value</span><span class="w">
+</span><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">500</span><span class="w">
+</span><span class="n">X_U</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">),</span><span class="n">U</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">))</span><span class="w">
+</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+
+</span><span class="c1"># Sampling Procedure</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="n">times</span><span class="p">)){</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">max</span><span class="o">=</span><span class="n">f_x</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="m">-1</span><span class="p">]))</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w">
+                    </span><span class="n">min</span><span class="o">=</span><span class="nf">max</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">-3</span><span class="o">-</span><span class="n">g_u</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">]))),</span><span class="w">
+                    </span><span class="n">max</span><span class="o">=</span><span class="nf">min</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">-3</span><span class="o">+</span><span class="n">g_u</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U</span><span class="p">[</span><span class="n">i</span><span class="p">]))))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Plot the result:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="n">X_U</span><span class="o">$</span><span class="n">U_line</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">f_x</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">)</span><span class="w">
+    
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">X_U</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_point</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">U</span><span class="p">),</span><span class="n">colour</span><span class="o">=</span><span class="s2">"#6495ED"</span><span class="p">,</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">U_line</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/img/in-post/Bayesian/sample22-1.png" alt="" /></p>
+
+<h2 id="a-3d-slice-sampler">A 3D slice sampler</h2>
+
+<p>Generate from the density:
+\(f(x)=\exp \left(-x^{2} / 2\right) \times(1+\cos (\pi x)) \times \mathrm{I}(x \in[-0.5,0.5])\)</p>
+
+<ul>
+  <li>Step 1: generate $\omega\mid x$
+    <ul>
+      <li>$\omega_1\sim U[0,\exp(-x^2/2)]$</li>
+      <li>$\omega_2\sim U[0,1+\cos(\pi x)]$</li>
+    </ul>
+  </li>
+  <li>Step 2: generate $x’\mid \omega$
+    <ul>
+      <li>$I_1=[-\sqrt{2\log(\omega_1)},\sqrt{2\log(\omega_1)}]$</li>
+      <li>$I_2=[-\frac{\arccos(\omega_2’-1)}{\pi},\frac{\arccos(\omega_2’-1)}{\pi}]$</li>
+      <li>$I_3=[-0.5,0.5]$</li>
+      <li>$x’\sim \boldsymbol{1}_A(x)$</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Define the maximum value of the uniform distribution.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="n">f</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+  </span><span class="n">f</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="m">2</span><span class="o">/</span><span class="m">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">cos</span><span class="p">(</span><span class="nb">pi</span><span class="o">*</span><span class="n">x</span><span class="p">))</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">f_x_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">^</span><span class="m">2</span><span class="o">/</span><span class="m">2</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">f_x_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="m">1</span><span class="o">+</span><span class="nf">cos</span><span class="p">(</span><span class="nb">pi</span><span class="o">*</span><span class="n">x</span><span class="p">))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">g_u_1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">u</span><span class="p">){</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="m">-2</span><span class="o">*</span><span class="nf">log</span><span class="p">(</span><span class="n">u</span><span class="p">)))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="n">g_u_2</span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">u</span><span class="p">){</span><span class="w">
+  </span><span class="n">g</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">acos</span><span class="p">(</span><span class="n">u</span><span class="m">-1</span><span class="p">)</span><span class="o">/</span><span class="nb">pi</span><span class="w">
+  </span><span class="k">if</span><span class="p">(</span><span class="n">g</span><span class="o">&gt;</span><span class="nb">pi</span><span class="o">/</span><span class="m">2.0</span><span class="p">){</span><span class="w">
+    </span><span class="n">g</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">g</span><span class="o">-</span><span class="nb">pi</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+  </span><span class="nf">return</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Generate the samples.</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="c1"># Set the generation rounds and initial value</span><span class="w">
+</span><span class="n">times</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">5000</span><span class="w">
+</span><span class="n">X_U</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">),</span><span class="n">U1</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">),</span><span class="n">U2</span><span class="o">=</span><span class="n">numeric</span><span class="p">(</span><span class="n">times</span><span class="p">))</span><span class="w">
+</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="m">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">0</span><span class="w">
+
+</span><span class="c1"># Sampling Procedure</span><span class="w">
+</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="n">times</span><span class="p">)){</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">U1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">max</span><span class="o">=</span><span class="n">f_x_1</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="m">-1</span><span class="p">]))</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">U2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="n">min</span><span class="o">=</span><span class="m">0</span><span class="p">,</span><span class="n">max</span><span class="o">=</span><span class="n">f_x_2</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="m">-1</span><span class="p">]))</span><span class="w">
+  </span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">runif</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w">
+                    </span><span class="n">min</span><span class="o">=</span><span class="nf">max</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">-0.5</span><span class="p">,</span><span class="o">-</span><span class="n">g_u_1</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U1</span><span class="p">[</span><span class="n">i</span><span class="p">]),</span><span class="o">-</span><span class="n">g_u_2</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U2</span><span class="p">[</span><span class="n">i</span><span class="p">]))),</span><span class="w">
+                    </span><span class="n">max</span><span class="o">=</span><span class="nf">min</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">0.5</span><span class="p">,</span><span class="n">g_u_1</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U1</span><span class="p">[</span><span class="n">i</span><span class="p">])),</span><span class="n">g_u_2</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">U2</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Plot the result:</p>
+
+<div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">seq</span><span class="p">(</span><span class="m">-0.5</span><span class="p">,</span><span class="m">0.5</span><span class="p">,</span><span class="n">by</span><span class="o">=</span><span class="m">0.01</span><span class="p">)</span><span class="w">
+</span><span class="n">C</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">*</span><span class="m">0.01</span><span class="w">
+</span><span class="n">X_U</span><span class="o">$</span><span class="n">U_line</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">X_U</span><span class="o">$</span><span class="n">X</span><span class="p">)</span><span class="o">/</span><span class="n">C</span><span class="w">
+    
+</span><span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">X_U</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_density</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span><span class="n">colour</span><span class="o">=</span><span class="s2">"blue"</span><span class="p">)</span><span class="o">+</span><span class="w">
+  </span><span class="n">geom_line</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">U_line</span><span class="p">),</span><span class="n">size</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/img/in-post/Bayesian/plot3-1.png" alt="" /></p>
+:ET

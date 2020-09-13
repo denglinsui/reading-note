@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="关于统计与学习 | 邓淋穗，ph.d candiadate| 这里是 @Linsui邓淋穗 的读书笔记。">
+    <meta name="keywords"  content="邓淋穗, Linsui邓淋穗, Linsui Deng, denglinsui, Statistics, R, C++, python">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Archive - 邓淋穗的读书笔记 | Linsui Reading Note">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Search for the articles easily.">
+    
+    <meta property="og:image" content="http://localhost:4000/img/denglinsui.jpg">
+    <meta property="og:url" content="http://localhost:4000/archive/">
+    <meta property="og:site_name" content="邓淋穗的读书笔记 | Linsui Reading Note">
+
+    <title>Archive - 邓淋穗的读书笔记 | Linsui Reading Note</title>
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/pwa/manifest.json">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://localhost:4000/archive/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']],
+        displayMath: [ ['$$','$$'] ]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Reading Note</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="huxblog_navbar">
+                <div class="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li class="search-icon">
+                            <a href="javascript:void(0)">
+                                <i class="fa fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <script>
+        // Drop Bootstarp low-performance Navbar
+        // Use customize navbar with high-quality material design animation
+        // in high-perf jank-free CSS3 implementation
+        var $body = document.body;
+        var $toggle = document.querySelector('.navbar-toggle');
+        var $navbar = document.querySelector('#huxblog_navbar');
+        var $collapse = document.querySelector('.navbar-collapse');
+
+        var __HuxNav__ = {
+            close: function () {
+                $navbar.className = " ";
+                // wait until animation end.
+                setTimeout(function () {
+                    // prevent frequently toggle
+                    if ($navbar.className.indexOf('in') < 0) {
+                        $collapse.style.height = "0px"
+                    }
+                }, 400)
+            },
+            open: function () {
+                $collapse.style.height = "auto"
+                $navbar.className += " in";
+            }
+        }
+
+        // Bind Event
+        $toggle.addEventListener('click', function (e) {
+            if ($navbar.className.indexOf('in') > 0) {
+                __HuxNav__.close()
+            } else {
+                __HuxNav__.open()
+            }
+        })
+
+        /**
+         * Since Fastclick is used to delegate 'touchstart' globally
+         * to hack 300ms delay in iOS by performing a fake 'click',
+         * Using 'e.stopPropagation' to stop 'touchstart' event from 
+         * $toggle/$collapse will break global delegation.
+         * 
+         * Instead, we use a 'e.target' filter to prevent handler
+         * added to document close HuxNav.  
+         *
+         * Also, we use 'click' instead of 'touchstart' as compromise
+         */
+        document.addEventListener('click', function (e) {
+            if (e.target == $toggle) return;
+            if (e.target.className == 'icon-bar') return;
+            __HuxNav__.close();
+        })
+    </script>
+    <!-- Search -->
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--
+Credits: this page shamelessly borrowed a lot from:
+https://github.com/kitian616/jekyll-TeXt-theme
+-->
+<!-- Page Header -->
+
+
+
+
+
+
+
+<header class="intro-header" style="background-image: url('/img/tag-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <div class="site-heading">
+        
+          <h1>Archive</h1>
+          <span class="subheading">Search for the articles easily.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Main Content -->
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<!-- Tags (as filter) -->
+			<div id='tag_cloud' class="tags tags-sup js-tags">
+				<a class="tag-button--all" data-encode="">
+					Show All
+					<sup>27</sup>
+				</a>
+
+				
+        
+				
+				
+				
+				<a data-sort="0012"
+					data-encode="%E7%AC%94%E8%AE%B0"
+					class="tag-button"
+					title="笔记" rel="15">
+					笔记
+					<sup>15</sup>
+				</a>
+				
+				<a data-sort="0015"
+					data-encode="Course"
+					class="tag-button"
+					title="Course" rel="12">
+					Course
+					<sup>12</sup>
+				</a>
+				
+				<a data-sort="0020"
+					data-encode="Others"
+					class="tag-button"
+					title="Others" rel="7">
+					Others
+					<sup>7</sup>
+				</a>
+				
+				<a data-sort="0021"
+					data-encode="Bayesian"
+					class="tag-button"
+					title="Bayesian" rel="6">
+					Bayesian
+					<sup>6</sup>
+				</a>
+				
+				<a data-sort="0021"
+					data-encode="Introduction"
+					class="tag-button"
+					title="Introduction" rel="6">
+					Introduction
+					<sup>6</sup>
+				</a>
+				
+				<a data-sort="0022"
+					data-encode="Statistics+Model"
+					class="tag-button"
+					title="Statistics Model" rel="5">
+					Statistics Model
+					<sup>5</sup>
+				</a>
+				
+				<a data-sort="0023"
+					data-encode="Stochastics+Process"
+					class="tag-button"
+					title="Stochastics Process" rel="4">
+					Stochastics Process
+					<sup>4</sup>
+				</a>
+				
+				<a data-sort="0024"
+					data-encode="Algorithm"
+					class="tag-button"
+					title="Algorithm" rel="3">
+					Algorithm
+					<sup>3</sup>
+				</a>
+				
+				<a data-sort="0024"
+					data-encode="Paper"
+					class="tag-button"
+					title="Paper" rel="3">
+					Paper
+					<sup>3</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="Concept"
+					class="tag-button"
+					title="Concept" rel="2">
+					Concept
+					<sup>2</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="Latex"
+					class="tag-button"
+					title="Latex" rel="2">
+					Latex
+					<sup>2</sup>
+				</a>
+				
+				<a data-sort="0025"
+					data-encode="Web+of+Science"
+					class="tag-button"
+					title="Web of Science" rel="2">
+					Web of Science
+					<sup>2</sup>
+				</a>
+				
+				<a data-sort="0026"
+					data-encode="Data"
+					class="tag-button"
+					title="Data" rel="1">
+					Data
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0026"
+					data-encode="Network"
+					class="tag-button"
+					title="Network" rel="1">
+					Network
+					<sup>1</sup>
+				</a>
+				
+				<a data-sort="0026"
+					data-encode="R+language"
+					class="tag-button"
+					title="R language" rel="1">
+					R language
+					<sup>1</sup>
+				</a>
+			</div>
+
+            <!-- Article List -->
+			<div class="mini-post-list js-result d-none"><section>
+				<span class="fa listing-seperator">
+					<span class="tag-text">2020</span>
+				</span><div class="post-preview item" data-tags="Statistics+Model,Introduction">
+				    <a href="/2020/09/13/StochasticsProcess-00-Introduction/">
+				        <h2 class="post-title">
+                            「Stochastics Process」0 Introduction
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Introduction - What will be involved in this part?
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Statistics+Model,Introduction">
+				    <a href="/2020/09/13/StatisticsModel-00-Introduction/">
+				        <h2 class="post-title">
+                            「Statistics Model」0 Introduction
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Introduction - What will be involved in this part?
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Others,Introduction">
+				    <a href="/2020/09/13/others-00-Introduction/">
+				        <h2 class="post-title">
+                            「Others」0 Introduction
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Introduction - What will be involved in this part?
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Concept">
+				    <a href="/2020/09/13/concept-01-Confounders/">
+				        <h2 class="post-title">
+                            「Concept」1 Confounding
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Confounding - a casual concept
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Concept,Introduction">
+				    <a href="/2020/09/13/concept-00-Introduction/">
+				        <h2 class="post-title">
+                            「Concept」0 Introduction
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Introduction - What will be involved in this part?
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Bayesian,Introduction">
+				    <a href="/2020/09/13/bayesian-00-Introduction/">
+				        <h2 class="post-title">
+                            「Bayesian」0 Introduction
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Introduction - What will be involved in this part?
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Algorithm,Introduction">
+				    <a href="/2020/09/13/Algorithm-00-Introduction/">
+				        <h2 class="post-title">
+                            「Algorithm」0 Introduction
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Introduction - What will be involved in this part?
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Algorithm,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/09/11/Algorithm-02-Variational-Inference/">
+				        <h2 class="post-title">
+                            「Algorithm」2 Variational Inference
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Variational Inference - Variational Inference
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Algorithm,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/">
+				        <h2 class="post-title">
+                            「Algorithm」1 EM Algorithm
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            EM Algorithm - Expectation-Maximization Algorithm
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Data,Others">
+				    <a href="/2020/09/10/others-06-Data-Data-for-Multiple-Testing/">
+				        <h2 class="post-title">
+                            「Others」6 Data for Multiple Testing
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Data for Multiple Testing - Multiple Testing
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Latex,Others">
+				    <a href="/2020/08/15/others-04-Latex-Package-Installation/">
+				        <h2 class="post-title">
+                            「Others」4 Latex Pakage Installation
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Latex Pakage Installation - Manual
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Latex,Others">
+				    <a href="/2020/08/15/others-05-Latex-Bibliography/">
+				        <h2 class="post-title">
+                            「Others」5 Latex Bibliography
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Latex Bibliography - BibTeX
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Stochastics+Process,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StochasticsProcess-02-Karhunen-Loeve-Expansion/">
+				        <h2 class="post-title">
+                            「Stochastics Process」2 Karhunen-Loeve Expansion
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Karhunen-Loeve Expansion - Principle Component/Expansion along eigenfunctions/The Karhunen-Loève theorem
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Stochastics+Process,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StochasticsProcess-03-Ergodic-Theory/">
+				        <h2 class="post-title">
+                            「Stochastics Process」3 Ergodic Theory
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Ergodic Theory - Transformation View/Process View
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Stochastics+Process,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StochasticsProcess-04-Mixing-and-Asymptotic-Independence/">
+				        <h2 class="post-title">
+                            「Stochastics Process」4 Mixing and Asymptotic Independence
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Mixing and Asymptotic Independence - Singularity/Regularity/The Cramér-Wold decomposition/Mixing
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Stochastics+Process,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StochasticsProcess-01-Generalized-Linear-Model/">
+				        <h2 class="post-title">
+                            「Stochastics Process」1 Linear Filters
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Linear Filter - Time Field/Spectrum Field/Differential Equations/White noise
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Statistics+Model,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StatisticsModel-03-Overdispersion/">
+				        <h2 class="post-title">
+                            「Statistics Model」3 Overdispersion
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Overdispersion - Definition/Ways of solving/Quasi-likelihood
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Statistics+Model,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StatisticsModel-02-Count-Data/">
+				        <h2 class="post-title">
+                            「Statistics Model」2 Count Data
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Count Data - Poisson v.s. Binomial/Contingency Tables
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Statistics+Model,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/08/08/StatisticsModel-01-Generalized-Linear-Model/">
+				        <h2 class="post-title">
+                            「Statistics Model」1 Generalized Linear Model
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Generalized Linear Model - Link function/Estimation/Inference
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Paper,Others,Web+of+Science">
+				    <a href="/2020/07/31/others-02-WOS%E6%95%B0%E6%8D%AE%E5%BA%93/">
+				        <h2 class="post-title">
+                            「Others」2 WoS数据库
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            WoS数据库 - 引文字段标识/数据爬取
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Paper,Others,Web+of+Science,Network">
+				    <a href="/2020/07/31/others-03-WOS-Citing-Analysis/">
+				        <h2 class="post-title">
+                            「Others」3 WOS Citation Analysis
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            WoS Citation Analysis - Data Collection
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Bayesian,R+language,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/07/21/bayesian-05-Slice-Sampling/">
+				        <h2 class="post-title">
+                            「Bayesian」5 Slice Sampling
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Slice Sampling - Implication
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Paper,Others,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/07/21/others-01-Suggestions-for-reading-paper/">
+				        <h2 class="post-title">
+                            「Others」1 Suggestions for reading paper
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Suggestions for reading paper - Reading Research Papers
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Bayesian,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/07/19/bayesian-01-Sampling-Method/">
+				        <h2 class="post-title">
+                            「Bayesian」1 Sampling Method
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Sampling Method - Rejection/MH/Langenvin/HMC/Stochastic HMC
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Bayesian,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/07/19/bayesian-04-High-Dimension-Bayesian/">
+				        <h2 class="post-title">
+                            「Bayesian」4 High-Dimensional Bayesian
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            High-Dimensional Bayesian - Bayesian Lasso/Bayesian Roubust Regression
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Bayesian,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/07/19/bayesian-03-Gibbs-Sampler/">
+				        <h2 class="post-title">
+                            「Bayesian」3 Gibbs Sampler
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Gibbs Sampler - A view from Slice Sampler
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div><div class="post-preview item" data-tags="Bayesian,Course,%E7%AC%94%E8%AE%B0">
+				    <a href="/2020/07/19/bayesian-02-Slice-Sampler/">
+				        <h2 class="post-title">
+                            「Bayesian」2 Slice Sampler
+				        </h2>
+				        
+				        <h3 class="post-subtitle">
+				            Slice Sampler - Simpler/General and examples
+				        </h3>
+				        
+				    </a>
+					<hr>
+				</div></section>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- SNS Link -->
+                
+
+
+<ul class="list-inline text-center">
+
+
+  
+  
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/denglinsui">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+</ul>
+
+                <p class="copyright text-muted">
+                    Copyright &copy; Reading Note 2020
+                    <br>
+                    Powered by <a href="https://denglinsui.github.io/">Linsui Blog</a> |
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="100px"
+                        height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=denglinsui&repo=denglinsui.github.io&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
+<script src="/js/bootstrap.min.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js "></script>
+
+<!-- Simple Jekyll Search -->
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+<!-- Service Worker -->
+
+<script src="/js/snackbar.js "></script>
+<script src="/js/sw-registration.js "></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+     - https://github.com/jneen/rouge/wiki/list-of-supported-languages-and-lexers
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    async('/js/jquery.tagcloud.js', function () {
+        $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: { start: '#bbbbee', end: '#2f93b4' },
+        };
+        $('#tag_cloud a').tagcloud();
+    })
+</script>
+<script src='/js/archive.js '></script>
+
+
+<!--fastClick.js -->
+<script>
+    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+<!-- Side Catalog -->
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        // interop with multilangual
+        if ('' == 'true') {
+            _containerSelector = 'div.post-container.active'
+        } else {
+            _containerSelector = 'div.post-container'
+        }
+
+        // init
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        // clean
+        $(selector).html('')
+
+        // appending
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    // toggle side catalog
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    /*
+     * Doc: https://github.com/davist11/jQuery-One-Page-Nav
+     * Fork by Hux to support padding
+     */
+    async("/js/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+<!-- Multi-Lingual -->
+
+
+<!-- Simple Jekyll Search -->
+<script>
+    // https://stackoverflow.com/questions/1912501/unescape-html-entities-in-javascript
+    function htmlDecode(input) {
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('search-results'),
+        json: '/search.json',
+        searchResultTemplate: '<div class="post-preview item"><a href="{url}"><h2 class="post-title">{title}</h2><h3 class="post-subtitle">{subtitle}</h3><hr></a></div>',
+        noResultsText: 'No results',
+        limit: 50,
+        fuzzy: false,
+        // a hack to get escaped subtitle unescaped. for some reason,
+        // post.subtitle w/o escape filter nuke entire search.
+        templateMiddleware: function (prop, value, template) {
+            if (prop === 'subtitle' || prop === 'title') {
+                if (value.indexOf("code")) {
+                    return htmlDecode(value);
+                } else {
+                    return value;
+                }
+            }
+        }
+    });
+
+    $(document).ready(function () {
+        var $searchPage = $('.search-page');
+        var $searchOpen = $('.search-icon');
+        var $searchClose = $('.search-icon-close');
+        var $searchInput = $('#search-input');
+        var $body = $('body');
+
+        $searchOpen.on('click', function (e) {
+            e.preventDefault();
+            $searchPage.toggleClass('search-active');
+            var prevClasses = $body.attr('class') || '';
+            setTimeout(function () {
+                $body.addClass('no-scroll');
+            }, 400)
+
+            if ($searchPage.hasClass('search-active')) {
+                $searchClose.on('click', function (e) {
+                    e.preventDefault();
+                    $searchPage.removeClass('search-active');
+                    $body.attr('class', prevClasses);  // from closure
+                });
+                $searchInput.focus();
+            }
+        });
+    });
+</script>
+
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

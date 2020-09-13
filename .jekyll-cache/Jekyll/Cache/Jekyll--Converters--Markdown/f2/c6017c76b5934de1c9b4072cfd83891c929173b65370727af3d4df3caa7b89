@@ -1,0 +1,183 @@
+I"c<h1 id="mixing-and-asymptotic-independence">Mixing and Asymptotic Independence</h1>
+
+<blockquote>
+  <p>Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/03.pdf" target="_blank">Stochastics Process」4 Mixing and Asymptotic Independence</a>.</p>
+</blockquote>
+
+<p>In this part, we care about:</p>
+
+<ul>
+  <li>Predictability</li>
+  <li>Asymptotic Independence and hence generalized central limit theorem.</li>
+</ul>
+
+<h2 id="singularity-and-regularity">Singularity and regularity</h2>
+
+<p>To start with, singularity measures the new information added with increasing observation interval; while regularity measures the infomation $x(t)$ originate.</p>
+
+<p>Note that $\mathscr{H}(x, t)=\mathscr{S}(x(s) ; s \leq t)$ and define $\mathscr{H}(x,-\infty)=\cap_{t \leq t_{0}} \mathscr{H}(x, t),t\rightarrow-\infty$. $\mathscr{H}(x, t)$ can be intepreted as the information of $x(s),s\leq t$ and $\mathscr{H}(x, -\infty)$ is the ancient information(far from now).</p>
+
+<h3 id="definition">Definition</h3>
+
+<p>For process ${x(t), t \in \mathbb{R}}$ is <strong>singular</strong> if $\mathscr{H}(x,-\infty)=\mathscr{H}(x)$; is <strong>regular</strong> if $\mathscr{H}(x,-\infty)=\mathbf{0}$.</p>
+
+<p><u>Note</u>: Singularity is also called purely determinism, that is, all future can be obtained from arbitary far back past.</p>
+
+<h3 id="the-cramér-wold-decomposition">The Cramér-Wold decomposition</h3>
+
+<p>Every stochastic process ${x(t), t \in \mathbb{R}},$ with $E\left(|x(t)|^{2}\right)&lt;\infty,$ exists a decomposition of two <em>uncorrelated</em> processes
+\(x(t)=y(t)+z(t)\)
+where ${y(t), t \in \mathbb{R}}$ is regular and ${z(t), t \in \mathbb{R}}$ is singular.</p>
+
+<h4 id="ar1-prcess-with-added-term">$AR(1)$ Prcess with added term</h4>
+
+<p>For $x(t)=a x(t-1)+e+e(t)$, it can be decomposed as $y(t)+z(t)$
+\(y(t)=\sum_{k=0}^{\infty} a^{k} e(t-k)\qquad z(t)=\frac{1}{1-a} e\)
+where $y(t)$ is regular and $z(t)$ is singular.</p>
+
+<h3 id="spectrum-decomposition">Spectrum Decomposition</h3>
+
+<p>The spectrum distribution function can be decomposed as
+\(F(\omega)=F^{(s)}(\omega)+F^{(ac)}(\omega)+F^{(d)}(\omega)\)
+where $F^{(ac)}(\omega)=\int_{\infty}^\omega f(x)dx$, $f(\omega)=F’(\omega)$, $F^{(d)}(\omega)=\sum_{\omega_{k} \leq \omega} \Delta F_{k}$ and $F^{(s)}(\omega)$ is the singular part.</p>
+
+<h3 id="conditions-for-stationary-sequences">Conditions for Stationary Sequences</h3>
+
+<p>Fristly, note the integral $P=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \log f(\omega) \mathrm{d} \omega$ is either finite or $-\infty$.</p>
+
+<p>Then, for a stationary sequence $\left{x_{n}, n \in \mathbb{N}\right}$</p>
+
+<ul>
+  <li>If $P=-\infty,$ then $x_{n}$ is singular.</li>
+  <li>If $P&gt;-\infty,$ and the spectrum is <em>absolutely continuous</em> with $f(\omega)&gt;0$ for almost all $\omega$, i.e.​ $F(\omega)=F^{(ac)}(\omega)$,​ then $x_{n}$ is regular.</li>
+  <li>If $P&gt;-\infty,$ but $F(\omega)$ is either discontinuous, or is continuous with non-vanishing singular part, $F^{(s)}(\omega) \neq 0,$ then $X_{n}$ is neither singular nor regular.</li>
+</ul>
+
+<p><u>Note</u>: A stationary sequence $x(t)$ is regular $\Leftrightarrow
+x_{t}=\sum_{k=-\infty}^{t} h_{t-k} y_{k}
+$
+where $y_{k}$ is uncorrelated.</p>
+
+<h4 id="some-special-case">Some Special Case</h4>
+
+<ul>
+  <li>
+    <p>If the spectrum is <em>discrete</em> with a finite number of jumps, then $f(\omega) = 0\ a.s.$  and $P = -\infty$, so the process is singular;</p>
+  </li>
+  <li>
+    <p>If the spectrum is <em>absolutely continuous</em> with density $f(\omega)$, singularity
+and regularity depends on whether $f(\omega)$ comes close to $0$ or not.</p>
+  </li>
+  <li>
+    <p>If $f(\omega) \geq c&gt;0$ for $-\pi&lt;\omega \leq \pi$, then the integral is finite and the process is regular.</p>
+  </li>
+</ul>
+
+<h3 id="conditions-for-stationary-processes">Conditions for Stationary Processes</h3>
+
+<p>Define the integral $Q=\int_{-\infty}^{\infty} \frac{\log f(\omega)}{1+\omega^{2}} \mathrm{d} \omega$.</p>
+
+<p>Then, for a stationary process ${x(t), t \in \mathbb{R}}$</p>
+
+<ul>
+  <li>If $Q=-\infty,$ then $x(t)$ is singular.</li>
+  <li>If $Q&gt;-\infty,$ and the spectrum is absolutely continuous, then $x(t)$ is regular.</li>
+</ul>
+
+<p><u>Note</u>: For a statioanry process ${x(t)}$, there is a singular-regular decomposition $x(t)=x^{(s)}(t)+\int_{u=-\infty}^{t} h(t-u) \mathrm{d} \xi(u)$, where ${\zeta(t), t \in \mathbb{R}}$ is a process with uncorrelated increments.</p>
+
+<h4 id="discussion">Discussion</h4>
+
+<p>Consider three process with covariance function and spectral density</p>
+
+<ul>
+  <li>$r_1(t)=e^{-t^2/2}$, $f_1(\omega)=\frac{1}{\sqrt{2 \pi}} e^{-\omega^{2} / 2} $, $Q=-\infty$</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>$r_2(t)=\frac{sin(t)}{t}$, $f_2(\omega)=\frac{1}{2} \boldsymbol{1}_{{\omega:</td>
+          <td>\omega</td>
+          <td>\leq 1}}$, $Q=-\infty$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>$r_3(t)=\exp(-\alpha</td>
+          <td>t</td>
+          <td>)$, $f_3(\omega)=\frac{\alpha}{\pi\left(\alpha^{2}+\omega^{2}\right)}$, $Q&gt;-\infty$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p>For the first two cases, $Q=-\infty$, which means $x(t)$ is singular and hence it is <em>predictable</em>. However, from the perspective of covariance function $r(t)\rightarrow 0, t\rightarrow\infty$, when the time varies with relatively long distance, the r.v. $x(s+t)$ and $x(s)$ are nearly irrelative ( If $x(t)$ is in additional Gaussian, they are nearly independent.)</p>
+
+<p>Therefore, independent doesn’t implies unpredictability. It also depends on the convergence rate of covariance function: for the case one $e^{-t^2/2}$ is too fast; for the case two $\frac{sin(t)}{t}$ is too slow.</p>
+
+<h2 id="mixing">Mixing</h2>
+
+<h3 id="global-mixing-for-general-process">Global Mixing for General Process</h3>
+
+<p>${x(t)}$ is stochastic process defined on $\mathscr{M}<em>a^b$,  $t$ is arbitary and $A \in \mathscr{M}</em>{-\infty}^{t}$. $U^{-k} B={x(\cdot) ; x(k+\cdot) \in B} \in \mathscr{M}_{k}^{\infty}$.</p>
+
+<ul>
+  <li><strong>uniform mixing</strong>: $\exists\ \phi(n)$ s.t. $\phi(n) \rightarrow 0$ as $n \rightarrow \infty,$ $B \in \mathscr{M}_{t+n}^{\infty}$</li>
+</ul>
+
+\[|P(A \cap B)-P(A) P(B)| \leq \phi(n) P(A)\]
+
+<ul>
+  <li><strong>strong mixing</strong>: $\exists\ \alpha(n)$ s.t. $\alpha(n) \rightarrow 0$ as $n \rightarrow \infty,$ $B \in \mathscr{M}_{t+n}^{\infty}$</li>
+</ul>
+
+\[|P(A \cap B)-P(A) P(B)| \leq \alpha(n)\]
+
+<ul>
+  <li><strong>ergodic mixing</strong>:  $B \in \mathscr{M}_{t}^{\infty}$,</li>
+</ul>
+
+\[\lim _{k \rightarrow \infty} P\left(A \cap U^{-k} B\right)=P(A) P(B)\]
+
+<ul>
+  <li><strong>weak mixing</strong>: $B \in$ $\mathscr{M}_{t}^{\infty}$</li>
+</ul>
+
+\[\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{k=1}^{n}\left|P\left(A \cap U^{-k} B\right)-P(A) P(B)\right|=0\]
+
+<p><u>Note</u>: From the expression, we know that mixing evaluates the level of independence w.r.t the distance $n$.</p>
+
+<p><u>Note</u>: Uniform mixing $\Rightarrow$ Strong mixing $\Rightarrow$ Ergodic mixing</p>
+
+<h3 id="global-mixing-for-gaussian-process">Global Mixing for Gaussian Process</h3>
+
+<p>Let ${x(t), t \in \mathbb{Z}}$ be a stationary Gaussian process.</p>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>uniformly mixing</strong>: $r(t)=0$ for $</td>
+          <td>t</td>
+          <td>&gt;m$, $m$-dependent.</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>strongly mixing</strong>: $f(\omega) \geq c&gt;0$ on $-\pi&lt;\omega \leq \pi$</li>
+  <li><strong>weakly mixing</strong>: $\Leftrightarrow$ ergodic $\Leftrightarrow$ the spectral distribution function is continuous.</li>
+</ul>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li><a href="https://www.amazon.com/Stationary-Stochastic-Processes-Applications-Statistical/dp/1466557796">Stationary Stochastic Processes</a></li>
+</ul>
+
+:ET

@@ -1,0 +1,154 @@
+I"�<h1 id="wos数据库">WOS数据库</h1>
+
+<h2 id="wos引文字段标识">WOS引文字段标识</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>字段标识</th>
+      <th>说明</th>
+      <th>字段标识</th>
+      <th>说明</th>
+      <th>字段标识</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FN</td>
+      <td>文件名</td>
+      <td>EM</td>
+      <td>电子邮件地址</td>
+      <td>PY</td>
+      <td>出版年</td>
+    </tr>
+    <tr>
+      <td>VR</td>
+      <td>版本号</td>
+      <td>FU</td>
+      <td>基金资助机构和授权号</td>
+      <td>VL</td>
+      <td>卷</td>
+    </tr>
+    <tr>
+      <td>PT</td>
+      <td>出版物类型</td>
+      <td>FX</td>
+      <td>基金资助正文</td>
+      <td>IS</td>
+      <td>期</td>
+    </tr>
+    <tr>
+      <td>AU</td>
+      <td>作者</td>
+      <td>CR</td>
+      <td>引用的参考文献</td>
+      <td>BP</td>
+      <td>开始页</td>
+    </tr>
+    <tr>
+      <td>AF</td>
+      <td>作者全名</td>
+      <td>NR</td>
+      <td>引用的参考文献数</td>
+      <td>EP</td>
+      <td>结束页</td>
+    </tr>
+    <tr>
+      <td>TI</td>
+      <td>标题</td>
+      <td>TC</td>
+      <td>被引频次计数(WoS核心合集)</td>
+      <td>DI</td>
+      <td>数字对象标识符 (DOI)</td>
+    </tr>
+    <tr>
+      <td>SO</td>
+      <td>来源出版物</td>
+      <td>Z9</td>
+      <td>被引频次合计（WoS核心、BCI 和 CSCD）</td>
+      <td>PG</td>
+      <td>页数</td>
+    </tr>
+    <tr>
+      <td>LA</td>
+      <td>语种</td>
+      <td>PU</td>
+      <td>出版商</td>
+      <td>WC</td>
+      <td>Web of Science 类别</td>
+    </tr>
+    <tr>
+      <td>DT</td>
+      <td>文献类型</td>
+      <td>PI</td>
+      <td>出版商所在城市</td>
+      <td>SC</td>
+      <td>研究方向</td>
+    </tr>
+    <tr>
+      <td>DE</td>
+      <td>关键词</td>
+      <td>PA</td>
+      <td>出版商地址</td>
+      <td>GA</td>
+      <td>文献传递号</td>
+    </tr>
+    <tr>
+      <td>ID</td>
+      <td>扩展关键字</td>
+      <td>SN</td>
+      <td>国际标准期刊号 (ISSN)</td>
+      <td>UT</td>
+      <td>入藏号</td>
+    </tr>
+    <tr>
+      <td>AB</td>
+      <td>摘要</td>
+      <td>J9</td>
+      <td>来源文献名称缩写</td>
+      <td>ER</td>
+      <td>记录结束</td>
+    </tr>
+    <tr>
+      <td>C1</td>
+      <td>作者地址</td>
+      <td>JI</td>
+      <td>ISO 来源文献名称缩写</td>
+      <td>EF</td>
+      <td>文件结束</td>
+    </tr>
+    <tr>
+      <td>RP</td>
+      <td>通讯作者地址</td>
+      <td>PD</td>
+      <td>出版日期</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="example">Example</h2>
+
+<p><a href="https://denglinsui.github.io/materials/ExForWOS.txt" target="_blank">导出的一篇文献的信息</a></p>
+
+<h2 id="wos数据爬取">WOS数据爬取</h2>
+
+<h3 id="方法一">方法一</h3>
+
+<p>如果想要批量获取WOS中文献的信息，可以使用<a href="https://mp.weixin.qq.com/s/XdZrUx22jwhJPkcDOnzrrw">python爬取WOS数据</a>中的方法，对应的github地址为<a href="https://github.com/tomleung1996/wos_crawler">WOS_Crawler</a>。</p>
+
+<h3 id="方法二">方法二</h3>
+
+<p>可以通过<a href="https://github.com/juba/rwos">RWOS</a>进行爬取，但是爬取之前需要先获取数据库的使用权限。</p>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li><a href="http://blog.sciencenet.cn/blog-2436014-924091.html">wos引文字段标识</a></li>
+  <li><a href="http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&amp;search_mode=GeneralSearch&amp;SID=7CROEqv8cv1x71Ns9tb&amp;preferencesSaved=">WOS website</a></li>
+  <li><a href="https://mp.weixin.qq.com/s/XdZrUx22jwhJPkcDOnzrrw">python爬取WOS数据</a></li>
+  <li><a href="https://github.com/tomleung1996/wos_crawl">WOS_Crawler</a></li>
+</ul>
+:ET

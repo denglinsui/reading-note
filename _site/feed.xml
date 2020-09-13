@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading Note</title>
+    <description>关于统计与学习 | 邓淋穗，ph.d candiadate| 这里是 @Linsui邓淋穗 的读书笔记。</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 13 Sep 2020 20:34:33 +0800</pubDate>
+    <lastBuildDate>Sun, 13 Sep 2020 20:34:33 +0800</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
+    
+      <item>
+        <title>「Stochastics Process」0 Introduction</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This part involves some basic stochastics process knowledge.&lt;/p&gt;
+
+&lt;p&gt;Most content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01~04&lt;/code&gt; describes the continuous stochastics process, coming from the contents of the Statistics Process course(2020 Spring) in &lt;a href=&quot;http://isbd.ruc.edu.cn/&quot;&gt;INSTITUTE OF STATISTICS AND BIG DATA, RUC&lt;/a&gt; and &lt;a href=&quot;https://www.amazon.com/Stationary-Stochastic-Processes-Applications-Statistical/dp/1466557796&quot;&gt;Stationary Stochastic Processes&lt;/a&gt; of &lt;a href=&quot;http://www.maths.lth.se/matstat/staff/georg/&quot;&gt;Georg Lindgren&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/StochasticsProcess-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/StochasticsProcess-00-Introduction/</guid>
+        
+        <category>Statistics Model</category>
+        
+        <category>Introduction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Statistics Model」0 Introduction</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This part involves some basic statistical model methods.&lt;/p&gt;
+
+&lt;p&gt;Most content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01~03&lt;/code&gt; comes from the contents of the Statistical Model course(2020 Spring) in &lt;a href=&quot;http://isbd.ruc.edu.cn/&quot;&gt;INSTITUTE OF STATISTICS AND BIG DATA, RUC&lt;/a&gt; and &lt;a href=&quot;https://www.cambridge.org/core/books/statistical-models/8EC19F80551F52D4C58FAA2022048FC7?__cf_chl_jschl_tk__=aa921ed4560dcaea177e8da320fca59b236ef827-1593743587-0-Aced3me35WQuzFYEtvpkZ_Elir4Gt9CInH2WMwxG_WMgu4KEpsi7sRFlcnKh7V23HK1UMQFiSC5tiTEtuo9sT_C1lnAlJ5k9gVej2S3NqvLdnMPR3JlpJ4tR3sNiaE2m7rCjabSX1l32yLgl6CS83-fxUdQoBmiU6KuWIdy14rAD-SYlV22sSmUD9CxSp5gCS2rnf_ip0AsWuC21P-XuwRh9uZZLDtfqLu4K5kjapJfsT2QB7Beeb2ljamMYfL3vm0t9FUs5S02iNGs89CtSdGA25F3XxEyF9IPVtZlfkvhNFWh-DOxW1JbbsmznYnxyC82lgvqZxQSgnVcwUQXqfWRyzET6iqsyMgG6L19WTHD2H8N74h-Sz18oB3cn-XX9b08yXYm7AKYzvR3NV7eh_f-sL15-pI9aMIZaN-ub2YfW&quot;&gt;Statstical Models&lt;/a&gt; of &lt;a href=&quot;https://scholar.google.com/citations?user=ocIDAto2lksC&amp;amp;hl=en&quot;&gt;A. C. Davison&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/StatisticsModel-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/StatisticsModel-00-Introduction/</guid>
+        
+        <category>Statistics Model</category>
+        
+        <category>Introduction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Others」0 Introduction</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This part involves some notes about, but not limited to, WOS, Latex, Data etc.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/others-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/others-00-Introduction/</guid>
+        
+        <category>Others</category>
+        
+        <category>Introduction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Concept」1 Confounding</title>
+        <description>&lt;h1 id=&quot;description&quot;&gt;Description&lt;/h1&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Confounding&quot;&gt;Confound: wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/concept-01-Confounders/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/concept-01-Confounders/</guid>
+        
+        <category>Concept</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Concept」0 Introduction</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This part involves some basic concepts in statistics which are relatively independent and easily clarified if I don’t go deeper in the corresponding filed.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/concept-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/concept-00-Introduction/</guid>
+        
+        <category>Concept</category>
+        
+        <category>Introduction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Bayesian」0 Introduction</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This part involves materials about Bayesian method.&lt;/p&gt;
+
+&lt;p&gt;Most content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01~05&lt;/code&gt; comes from the lecture notes of the Bayesian course(2020 Spring) in &lt;a href=&quot;http://isbd.ruc.edu.cn/&quot;&gt;INSTITUTE OF STATISTICS AND BIG DATA, RUC&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/bayesian-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/bayesian-00-Introduction/</guid>
+        
+        <category>Bayesian</category>
+        
+        <category>Introduction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Algorithm」0 Introduction</title>
+        <description>&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This part involves introduction and implement of some common algorithm.&lt;/p&gt;
+
+&lt;p&gt;Since there are abundant comprehensive tutorials about these algorithm, the notes are structured in the manner that easily picked by me.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/13/Algorithm-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/13/Algorithm-00-Introduction/</guid>
+        
+        <category>Algorithm</category>
+        
+        <category>Introduction</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Algorithm」2 Variational Inference</title>
+        <description>&lt;h1 id=&quot;variational-inference&quot;&gt;Variational Inference&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since there are some problems about mathjax, I also upload the pdf version &lt;a href=&quot;https://denglinsui.github.io/pdf/Algorithm/02.pdf&quot; target=&quot;_blank&quot;&gt;「Algorithm」2 Variational Inference&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;变分推断用于解决参数估计以及有缺失数据的问题，它可以看作是&lt;a href=&quot;https://denglinsui.github.io/2020/09/10/Algorithm-01-EM-Algorithm/&quot;&gt;EM算法&lt;/a&gt;在贝叶斯框架下的一个推广。&lt;a href=&quot;https://denglinsui.github.io/2020/09/10/Algorithm-01-EM-Algorithm/&quot;&gt;EM算法&lt;/a&gt;通过选择最大化完全似然条件在观测数据的参数来对参数进行推断。而变分推断则尝试用一个函数族对后验来进行逼近。&lt;/p&gt;
+
+&lt;p&gt;变分推断能够：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;为没有观测到的变量（包含参数）的后验得到一个解析的近似，从而能够对这些变量进行推断。&lt;/li&gt;
+  &lt;li&gt;可以得到观测变量边际分布的一个下界，这个值能够反映对应变量的重要程度，从而能够用于模型选择。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;why&quot;&gt;WHY？&lt;/h2&gt;
+
+&lt;p&gt;假设$X$为观测数据，$Z={Z_1,\cdots,Z_n}$为未观测数据或者参数，由于后验$\Pr(Z|X)$的常数项通常是一个难以求解，我们的目标是找到variational distribution $Q(Z)$使得：
+\(\Pr(Z|X)\approx Q(Z)\)&lt;/p&gt;
+
+&lt;h3 id=&quot;kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/h3&gt;
+
+&lt;h4 id=&quot;introduction-of-kl-divergence&quot;&gt;Introduction of KL divergence&lt;/h4&gt;
+
+&lt;p&gt;KL散度起源于信息论中，常用于衡量两个分布的相似性。
+\(\mathrm{KL}(q \| p)=\mathrm{E}_{q}\left[\log \frac{q(X)}{p(X)}\right]\)
+通过Jensen’s Inequality，我们很容易得到$\mathrm{KL}(q | p)\geq0$并且等于$0$当且仅当$p$和$q$几乎处处相等。&lt;/p&gt;
+
+&lt;p&gt;在上述描述中，我们可以知道KL散度越小，两个分布越接近。实际上，我们可以将KL散度分为三种情况：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;当$q$较高，$p$也比较高；&lt;/li&gt;
+  &lt;li&gt;当$q$较高，$p$却较低；&lt;/li&gt;
+  &lt;li&gt;$q$较低。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;第一种情况是我们乐于见到的，因为这代表了$p$和$q$比较接近；而第二种情况是我们不希望看到的；最后一种情况在求期望的时候影响较小，因此我们并不关心这一部分。&lt;/p&gt;
+
+&lt;h4 id=&quot;kl-divergence-in-variational-inference&quot;&gt;KL divergence in variational inference&lt;/h4&gt;
+
+&lt;p&gt;在变分推断中，需要度量的KL散度为
+\(\mathrm{KL}(q \| p)=\mathrm{E}_{q}\left[\log \frac{q(Z)}{p(Z \mid x)}\right]\)&lt;/p&gt;
+
+&lt;h3 id=&quot;evidence-lower-bound&quot;&gt;Evidence Lower Bound&lt;/h3&gt;
+
+&lt;p&gt;由于我们无法直接对观测数据的对数似然进行估计，我们利用Jensen’s Inequality得到：
+\(\begin{aligned}
+\log p(x) &amp;amp;=\log \int_{z} p(x, z) \\
+&amp;amp;=\log \int_{z} p(x, z) \frac{q(z)}{q(z)} \\
+&amp;amp;=\log \left(\mathrm{E}_{q}\left[\frac{p(x, Z)}{q(z)}\right]\right) \\
+&amp;amp; \geq \mathrm{E}_{q}[\log p(x, Z)]-\underbrace{\mathrm{E}_{q}[\log q(Z)]}_{Entropy}
+\end{aligned}\)
+其中，$\mathrm{E}&lt;em&gt;{q}[\log p(x, Z)]-\mathrm{E}&lt;/em&gt;{q}[\log q(Z)]$为ELBO，为观测数据的对数似然的一个下界。于是，我们的目标从最大化$\log(p)$转移为最大化ELBO。&lt;/p&gt;
+
+&lt;h4 id=&quot;another-viewpoint&quot;&gt;Another viewpoint&lt;/h4&gt;
+
+&lt;p&gt;接着，我们可以建立ELBO和KL散度之间的联系，利用
+\(p(z \mid x)=\frac{p(z, x)}{p(x)}\)
+得到
+\(\begin{aligned}
+\mathrm{KL}(q(z) \| p(z \mid x)) &amp;amp;=\mathrm{E}_{q}\left[\log \frac{q(Z)}{p(Z \mid x)}\right] \\
+&amp;amp;=\mathrm{E}_{q}[\log q(Z)]-\mathrm{E}_{q}[\log p(Z \mid x)] \\
+&amp;amp;=\mathrm{E}_{q}[\log q(Z)]-\mathrm{E}_{q}[\log p(Z, x)]+\log p(x) \\
+&amp;amp;=-\left(\mathrm{E}_{q}[\log p(Z, x)]-\mathrm{E}_{q}[\log q(Z)]\right)+\log p(x)\\
+&amp;amp;=-\text{ELBO}+\log p(x)
+\end{aligned}\)
+由于$p(x)$是固定的，从这个角度来说，我们要最小化$q(z)$(approximator)和后验之间KL散度等价于最大化ELBO。&lt;/p&gt;
+
+&lt;h2 id=&quot;mean-field-variational-inference&quot;&gt;Mean Field Variational Inference&lt;/h2&gt;
+
+&lt;p&gt;接下来，我们介绍着mean field方法，一种常用的求解variational inference的方法。&lt;/p&gt;
+
+&lt;p&gt;之前提到之所以要使用variational inference，是因为后验的归一化常数难以估计。因此，我们假设我们的approximator是一族由简单函数的乘积构成的函数：
+\(q\left(z_{1}, \ldots, z_{m}\right)=\prod_{j=1}^{m} q\left(z_{j}\right)\)
+&lt;em&gt;注&lt;/em&gt;：这里$q(z_j)$并不代表marginal distribution，这是用于估计approximator的一个整体。&lt;/p&gt;
+
+&lt;p&gt;接着，我们采用坐标下降推断，也就是迭代优化每个vatiational distribution的时候，固定其他vatiational distribution，一次只对一个进行估计。&lt;/p&gt;
+
+&lt;h4 id=&quot;梯度下降法&quot;&gt;梯度下降法&lt;/h4&gt;
+
+&lt;p&gt;首先，分解联合分布：
+\(p\left(z_{1: m}, x_{1: n}\right)=p\left(x_{1: n}\right) \prod_{j=1}^{m} p\left(z_{j} \mid z_{1:(j-1)}, x_{1: n}\right)\)
+接着，分解variational distribution的熵：
+\(\mathrm{E}\left[\log q\left(z_{1: m}\right)\right]=\sum_{j=1}^{m} \mathrm{E}_{j}\left[\log q\left(z_{j}\right)\right]\)
+于是，ELBO可以写为：
+\(\mathcal{L}=\log p\left(x_{1: n}\right)+\sum_{j=1}^{m} \operatorname{E}\left[\log p\left(z_{j} \mid z_{1:(j-1)}, x_{1: n}\right)\right]-E_{j}\left[\log q\left(z_{j}\right)\right]\)
+注意到在这一步只更新$q(z_k)$，因此我们可以提出相关的项，得到：
+\(\mathcal{L}_{k}=\int q\left(z_{k}\right) \mathrm{E}_{-k}\left[\log p\left(z_{k} \mid z_{-k}, x\right)\right] d z_{k}-\int q\left(z_{k}\right) \log q\left(z_{k}\right) d z_{k}\)
+求导得到：
+\(\frac{d \mathcal{L}_{k}}{d q\left(z_{k}\right)}=\mathrm{E}_{-k}\left[\log p\left(z_{k} \mid z_{-k}, x\right)\right]-\log q\left(z_{k}\right)-1=0\)
+于是可以得到：
+\(q^{*}\left(z_{k}\right) \propto \exp \left\{\mathrm{E}_{-k}\left[\log p\left(z_{k} \mid Z_{-k}, x\right)\right]\right\}\)
+但是由于$(Z_{-k},x)$与$q^\star(z_k)$无关，所以
+\(q^{*}\left(z_{k}\right) \propto \exp \left\{\mathrm{E}_{-k}\left[\log p\left(z_{k}, Z_{-k}, x\right)\right]\right\}\)&lt;/p&gt;
+
+&lt;h1 id=&quot;参考资料&quot;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Variational_Bayesian_methods&quot;&gt;Variational Bayesian methods wiki&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.orchid.ac.uk/eprints/40/1/fox_vbtut.pdf&quot;&gt;A Tutorial on Variational Bayesian Inference&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational-inference-i.pdf&quot;&gt;Variational Inference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 11 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/11/Algorithm-02-Variational-Inference/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/11/Algorithm-02-Variational-Inference/</guid>
+        
+        <category>Algorithm</category>
+        
+        <category>笔记</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Others」6 Data for Multiple Testing</title>
+        <description>&lt;h1 id=&quot;description&quot;&gt;Description&lt;/h1&gt;
+
+&lt;p&gt;This page collects data that is used in multiple testing.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Note&lt;/em&gt;: When the data collected is abundant enough, I will categorize them (I hope I will).&lt;/p&gt;
+
+&lt;h1 id=&quot;data&quot;&gt;Data&lt;/h1&gt;
+
+&lt;h4 id=&quot;estrogen雌性激素-dataset&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;estrogen&lt;/code&gt;(雌性激素) dataset&lt;/h4&gt;
+
+&lt;p&gt;The description of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;estrogen&lt;/code&gt; dataset is mainly from &lt;a href=&quot;https://lihualei71.github.io/demo_gene_drug.nb.html&quot;&gt;Lei Lihua’s demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;estrogen&lt;/code&gt; dataset is a gene/drug response dataset frome NCBI Gene Expression Omnibus(NEO). &lt;strong&gt;It consists of  gene expression measurements for $n=22283$ genes, in response to estrogen treatments in breast cancer cells for five groups of patients, with different dosage levels and $5$ trials in each.&lt;/strong&gt; The task is to identify the genes responding to a low dosage.  The p-values $p_i$ for gene $i$ is obtained by a one-sided permutation test which evaluates evidence for a change in gene expression level between the control group (placebo) and the low-dose group.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://lihualei71.github.io/demo_gene_drug.nb.html&quot;&gt;Lei Lihua’s demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/10/others-06-Data-Data-for-Multiple-Testing/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/10/others-06-Data-Data-for-Multiple-Testing/</guid>
+        
+        <category>Data</category>
+        
+        <category>Others</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>「Algorithm」1 EM Algorithm</title>
+        <description>&lt;h1 id=&quot;em-algorithm&quot;&gt;EM Algorithm&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Since there are some problems about mathjax, I also upload the pdf version &lt;a href=&quot;https://denglinsui.github.io/pdf/Algorithm/01.pdf&quot; target=&quot;_blank&quot;&gt;「Algorithm」1 EM Algorithm&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+
+&lt;p&gt;EM算法在1977年由 &lt;a href=&quot;https://en.wikipedia.org/wiki/Arthur_P._Dempster&quot;&gt;Arthur Dempster&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Nan_Laird&quot;&gt;Nan Laird&lt;/a&gt;, 和&lt;a href=&quot;https://en.wikipedia.org/wiki/Donald_Rubin&quot;&gt;Donald Rubin&lt;/a&gt;在《Maximum Likelihood from Incomplete Data via the EM Algorithm》中首次正式提出。&lt;/p&gt;
+
+&lt;p&gt;EM算法通常在频率学派中用于处理缺失数据的一种很广泛的算法，其主要思想是采用迭代的算法，不断通过条件在观测数据上的对缺失数据的似然进行估计，并且选取参数极大化似然，从而得到对参数的推断。&lt;/p&gt;
+
+&lt;p&gt;也就是说，EM算法对Missing Data的处理方式是通过取期望移除，而这个期望是条件在观测数据上的。&lt;/p&gt;
+
+&lt;h2 id=&quot;em算法&quot;&gt;EM算法&lt;/h2&gt;
+
+&lt;p&gt;令$Y$代表观测数据，$U$代表未观测数据，我们的目标是在如下模型中对参数$\theta$进行推断：
+\(f(y;\theta)=\int f(y|u;\theta)f(u;\theta)\mathrm{d}u\)
+这里，我们并不直接计算$f(y;\theta)$，而是通过计算完全数据的对数似然(&lt;em&gt;complete-data log likelihood&lt;/em&gt;)的期望
+\(\log f(y,u;\theta)=\underbrace{\log f(y;\theta)}_{l(\theta)}+\log f(u\mid y;\theta)\)
+但是由于$u$未知，这个式子仍然无法进行计算。因此，我们计算其条件在观测数据和当前参数$(Y=y,\theta’)$上的期望并将其记为$Q(\theta;\theta^\prime)$：
+\(\mathrm{E}\left\{\log f(Y, U ; \theta) \mid Y=y ; \theta^{\prime}\right\}=\ell(\theta)+\mathrm{E}\left\{\log f(U \mid Y ; \theta) \mid Y=y ; \theta^{\prime}\right\}\)&lt;/p&gt;
+
+&lt;h3 id=&quot;算法&quot;&gt;算法&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;E步：计算$Q(\theta;\theta^\prime)$;&lt;/li&gt;
+  &lt;li&gt;M步：固定$\theta^\prime$，选取$\theta^+$最大化$Q(\theta;\theta^\prime)$，令$\theta^\prime=\theta^+$；&lt;/li&gt;
+  &lt;li&gt;重复上面两步直到收敛。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;为什么em算法可行&quot;&gt;为什么EM算法可行？&lt;/h2&gt;
+
+&lt;p&gt;注意到我们想要最大话的目标是$\ell(\theta)$，但是我们实际上在每一步最大化的目标是$Q(\theta;\theta^\prime)$。但是，通过推导可以得到
+\(Q\left(\theta ; \theta^{\prime}\right) \geq Q\left(\theta^{\prime} ; \theta^{\prime}\right) \text { implies } \ell(\theta)-\ell\left(\theta^{\prime}\right) \geq C\left(\theta^{\prime} ; \theta^{\prime}\right)-C\left(\theta ; \theta^{\prime}\right) \geq 0\)
+因此，每一步迭代都使得$\ell(\theta)$不减，从而最大化。&lt;/p&gt;
+
+&lt;h2 id=&quot;算法加速&quot;&gt;算法加速&lt;/h2&gt;
+
+&lt;p&gt;尽管EM算法的理论性质良好，但是它的收敛比较慢，有时候可以通过直接将M步改为直接最大化，考虑如下近似：
+\(\frac{\partial \ell(\theta)}{\partial \theta}=\left.\frac{\partial Q\left(\theta ; \theta^{\prime}\right)}{\partial \theta}\right|_{\theta^{\prime}=\theta}
+\qquad
+\frac{\partial^{2} \ell(\theta)}{\partial \theta \partial \theta^{\mathrm{T}}}=\left.\left\{\frac{\partial^{2} Q\left(\theta ; \theta^{\prime}\right)}{\partial \theta \partial \theta^{\mathrm{T}}}+\frac{\partial^{2} Q\left(\theta ; \theta^{\prime}\right)}{\partial \theta \partial \theta^{\prime} \mathrm{T}}\right\}\right|_{\theta^{\prime}=\theta}\)
+这样就可以直接进行牛顿二阶梯度下降法。&lt;/p&gt;
+
+&lt;h1 id=&quot;参考资料&quot;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cambridge.org/core/books/statistical-models/8EC19F80551F52D4C58FAA2022048FC7?__cf_chl_jschl_tk__=aa921ed4560dcaea177e8da320fca59b236ef827-1593743587-0-Aced3me35WQuzFYEtvpkZ_Elir4Gt9CInH2WMwxG_WMgu4KEpsi7sRFlcnKh7V23HK1UMQFiSC5tiTEtuo9sT_C1lnAlJ5k9gVej2S3NqvLdnMPR3JlpJ4tR3sNiaE2m7rCjabSX1l32yLgl6CS83-fxUdQoBmiU6KuWIdy14rAD-SYlV22sSmUD9CxSp5gCS2rnf_ip0AsWuC21P-XuwRh9uZZLDtfqLu4K5kjapJfsT2QB7Beeb2ljamMYfL3vm0t9FUs5S02iNGs89CtSdGA25F3XxEyF9IPVtZlfkvhNFWh-DOxW1JbbsmznYnxyC82lgvqZxQSgnVcwUQXqfWRyzET6iqsyMgG6L19WTHD2H8N74h-Sz18oB3cn-XX9b08yXYm7AKYzvR3NV7eh_f-sL15-pI9aMIZaN-ub2YfW&quot;&gt;Statstical Models&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm#:~:text=In%20statistics%2C%20an%20expectation%E2%80%93maximization,depends%20on%20unobserved%20latent%20variables.&quot;&gt;Expectation-Maximization algorithm wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 10 Sep 2020 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/</guid>
+        
+        <category>Algorithm</category>
+        
+        <category>笔记</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

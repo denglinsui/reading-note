@@ -1,0 +1,219 @@
+[
+  
+    {
+      "title"    : "「Stochastics Process」0 Introduction",
+      "subtitle" : "Introduction - What will be involved in this part?",
+      "tags"     : "Statistics Model, Introduction",
+      "url"      : "/2020/09/13/StochasticsProcess-00-Introduction/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Statistics Model」0 Introduction",
+      "subtitle" : "Introduction - What will be involved in this part?",
+      "tags"     : "Statistics Model, Introduction",
+      "url"      : "/2020/09/13/StatisticsModel-00-Introduction/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」0 Introduction",
+      "subtitle" : "Introduction - What will be involved in this part?",
+      "tags"     : "Others, Introduction",
+      "url"      : "/2020/09/13/others-00-Introduction/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Concept」1 Confounding",
+      "subtitle" : "Confounding - a casual concept",
+      "tags"     : "Concept",
+      "url"      : "/2020/09/13/concept-01-Confounders/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Concept」0 Introduction",
+      "subtitle" : "Introduction - What will be involved in this part?",
+      "tags"     : "Concept, Introduction",
+      "url"      : "/2020/09/13/concept-00-Introduction/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Bayesian」0 Introduction",
+      "subtitle" : "Introduction - What will be involved in this part?",
+      "tags"     : "Bayesian, Introduction",
+      "url"      : "/2020/09/13/bayesian-00-Introduction/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Algorithm」0 Introduction",
+      "subtitle" : "Introduction - What will be involved in this part?",
+      "tags"     : "Algorithm, Introduction",
+      "url"      : "/2020/09/13/Algorithm-00-Introduction/",
+      "date"     : "2020-09-13 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Algorithm」2 Variational Inference",
+      "subtitle" : "Variational Inference - Variational Inference",
+      "tags"     : "Algorithm, 笔记",
+      "url"      : "/2020/09/11/Algorithm-02-Variational-Inference/",
+      "date"     : "2020-09-11 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」6 Data for Multiple Testing",
+      "subtitle" : "Data for Multiple Testing - Multiple Testing",
+      "tags"     : "Data, Others",
+      "url"      : "/2020/09/10/others-06-Data-Data-for-Multiple-Testing/",
+      "date"     : "2020-09-10 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Algorithm」1 EM Algorithm",
+      "subtitle" : "EM Algorithm - Expectation-Maximization Algorithm",
+      "tags"     : "Algorithm, 笔记",
+      "url"      : "/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/",
+      "date"     : "2020-09-10 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」5 Latex Bibliography",
+      "subtitle" : "Latex Bibliography - BibTeX",
+      "tags"     : "Latex, Others",
+      "url"      : "/2020/08/15/others-05-Latex-Bibliography/",
+      "date"     : "2020-08-15 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」4 Latex Pakage Installation",
+      "subtitle" : "Latex Pakage Installation - Manual",
+      "tags"     : "Latex, Others",
+      "url"      : "/2020/08/15/others-04-Latex-Package-Installation/",
+      "date"     : "2020-08-15 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Stochastics Process」4 Mixing and Asymptotic Independence",
+      "subtitle" : "Mixing and Asymptotic Independence - Singularity/Regularity/The Cramér-Wold decomposition/Mixing",
+      "tags"     : "Stochastics Process, Course, 笔记",
+      "url"      : "/2020/08/08/StochasticsProcess-04-Mixing-and-Asymptotic-Independence/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Stochastics Process」3 Ergodic Theory",
+      "subtitle" : "Ergodic Theory - Transformation View/Process View",
+      "tags"     : "Stochastics Process, Course, 笔记",
+      "url"      : "/2020/08/08/StochasticsProcess-03-Ergodic-Theory/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Stochastics Process」2 Karhunen-Loeve Expansion",
+      "subtitle" : "Karhunen-Loeve Expansion - Principle Component/Expansion along eigenfunctions/The Karhunen-Loève theorem",
+      "tags"     : "Stochastics Process, Course, 笔记",
+      "url"      : "/2020/08/08/StochasticsProcess-02-Karhunen-Loeve-Expansion/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Stochastics Process」1 Linear Filters",
+      "subtitle" : "Linear Filter - Time Field/Spectrum Field/Differential Equations/White noise",
+      "tags"     : "Stochastics Process, Course, 笔记",
+      "url"      : "/2020/08/08/StochasticsProcess-01-Generalized-Linear-Model/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Statistics Model」3 Overdispersion",
+      "subtitle" : "Overdispersion - Definition/Ways of solving/Quasi-likelihood",
+      "tags"     : "Statistics Model, Course, 笔记",
+      "url"      : "/2020/08/08/StatisticsModel-03-Overdispersion/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Statistics Model」2 Count Data",
+      "subtitle" : "Count Data - Poisson v.s. Binomial/Contingency Tables",
+      "tags"     : "Statistics Model, Course, 笔记",
+      "url"      : "/2020/08/08/StatisticsModel-02-Count-Data/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Statistics Model」1 Generalized Linear Model",
+      "subtitle" : "Generalized Linear Model - Link function/Estimation/Inference",
+      "tags"     : "Statistics Model, Course, 笔记",
+      "url"      : "/2020/08/08/StatisticsModel-01-Generalized-Linear-Model/",
+      "date"     : "2020-08-08 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」3 WOS Citation Analysis",
+      "subtitle" : "WoS Citation Analysis - Data Collection",
+      "tags"     : "Paper, Others, Web of Science, Network",
+      "url"      : "/2020/07/31/others-03-WOS-Citing-Analysis/",
+      "date"     : "2020-07-31 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」2 WoS数据库",
+      "subtitle" : "WoS数据库 - 引文字段标识/数据爬取",
+      "tags"     : "Paper, Others, Web of Science",
+      "url"      : "/2020/07/31/others-02-WOS%E6%95%B0%E6%8D%AE%E5%BA%93/",
+      "date"     : "2020-07-31 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Others」1 Suggestions for reading paper",
+      "subtitle" : "Suggestions for reading paper - Reading Research Papers",
+      "tags"     : "Paper, Others, 笔记",
+      "url"      : "/2020/07/21/others-01-Suggestions-for-reading-paper/",
+      "date"     : "2020-07-21 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Bayesian」5 Slice Sampling",
+      "subtitle" : "Slice Sampling - Implication",
+      "tags"     : "Bayesian, R language, Course, 笔记",
+      "url"      : "/2020/07/21/bayesian-05-Slice-Sampling/",
+      "date"     : "2020-07-21 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Bayesian」4 High-Dimensional Bayesian",
+      "subtitle" : "High-Dimensional Bayesian - Bayesian Lasso/Bayesian Roubust Regression",
+      "tags"     : "Bayesian, Course, 笔记",
+      "url"      : "/2020/07/19/bayesian-04-High-Dimension-Bayesian/",
+      "date"     : "2020-07-19 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Bayesian」3 Gibbs Sampler",
+      "subtitle" : "Gibbs Sampler - A view from Slice Sampler",
+      "tags"     : "Bayesian, Course, 笔记",
+      "url"      : "/2020/07/19/bayesian-03-Gibbs-Sampler/",
+      "date"     : "2020-07-19 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Bayesian」2 Slice Sampler",
+      "subtitle" : "Slice Sampler - Simpler/General and examples",
+      "tags"     : "Bayesian, Course, 笔记",
+      "url"      : "/2020/07/19/bayesian-02-Slice-Sampler/",
+      "date"     : "2020-07-19 00:00:00 +0800"
+    } ,
+  
+    {
+      "title"    : "「Bayesian」1 Sampling Method",
+      "subtitle" : "Sampling Method - Rejection/MH/Langenvin/HMC/Stochastic HMC",
+      "tags"     : "Bayesian, Course, 笔记",
+      "url"      : "/2020/07/19/bayesian-01-Sampling-Method/",
+      "date"     : "2020-07-19 00:00:00 +0800"
+    } 
+  
+]

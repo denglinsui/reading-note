@@ -1,0 +1,53 @@
+I"O<h1 id="em-algorithm">EM Algorithm</h1>
+
+<blockquote>
+  <p>Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Algorithm/01.pdf" target="_blank">「Algorithm」1 EM Algorithm</a>.</p>
+
+</blockquote>
+
+<h2 id="背景">背景</h2>
+
+<p>EM算法在1977年由 <a href="https://en.wikipedia.org/wiki/Arthur_P._Dempster">Arthur Dempster</a>, <a href="https://en.wikipedia.org/wiki/Nan_Laird">Nan Laird</a>, 和<a href="https://en.wikipedia.org/wiki/Donald_Rubin">Donald Rubin</a>在《Maximum Likelihood from Incomplete Data via the EM Algorithm》中首次正式提出。</p>
+
+<p>EM算法通常在频率学派中用于处理缺失数据的一种很广泛的算法，其主要思想是采用迭代的算法，不断通过条件在观测数据上的对缺失数据的似然进行估计，并且选取参数极大化似然，从而得到对参数的推断。</p>
+
+<p>也就是说，EM算法对Missing Data的处理方式是通过取期望移除，而这个期望是条件在观测数据上的。</p>
+
+<h2 id="em算法">EM算法</h2>
+
+<p>令$Y$代表观测数据，$U$代表未观测数据，我们的目标是在如下模型中对参数$\theta$进行推断：
+\(f(y;\theta)=\int f(y|u;\theta)f(u;\theta)\mathrm{d}u\)
+这里，我们并不直接计算$f(y;\theta)$，而是通过计算完全数据的对数似然(<em>complete-data log likelihood</em>)的期望
+\(\log f(y,u;\theta)=\underbrace{\log f(y;\theta)}_{l(\theta)}+\log f(u\mid y;\theta)\)
+但是由于$u$未知，这个式子仍然无法进行计算。因此，我们计算其条件在观测数据和当前参数$(Y=y,\theta’)$上的期望并将其记为$Q(\theta;\theta^\prime)$：
+\(\mathrm{E}\left\{\log f(Y, U ; \theta) \mid Y=y ; \theta^{\prime}\right\}=\ell(\theta)+\mathrm{E}\left\{\log f(U \mid Y ; \theta) \mid Y=y ; \theta^{\prime}\right\}\)</p>
+
+<h3 id="算法">算法</h3>
+
+<ol>
+  <li>E步：计算$Q(\theta;\theta^\prime)$;</li>
+  <li>M步：固定$\theta^\prime$，选取$\theta^+$最大化$Q(\theta;\theta^\prime)$，令$\theta^\prime=\theta^+$；</li>
+  <li>重复上面两步直到收敛。</li>
+</ol>
+
+<h2 id="为什么em算法可行">为什么EM算法可行？</h2>
+
+<p>注意到我们想要最大话的目标是$\ell(\theta)$，但是我们实际上在每一步最大化的目标是$Q(\theta;\theta^\prime)$。但是，通过推导可以得到
+\(Q\left(\theta ; \theta^{\prime}\right) \geq Q\left(\theta^{\prime} ; \theta^{\prime}\right) \text { implies } \ell(\theta)-\ell\left(\theta^{\prime}\right) \geq C\left(\theta^{\prime} ; \theta^{\prime}\right)-C\left(\theta ; \theta^{\prime}\right) \geq 0\)
+因此，每一步迭代都使得$\ell(\theta)$不减，从而最大化。</p>
+
+<h2 id="算法加速">算法加速</h2>
+
+<p>尽管EM算法的理论性质良好，但是它的收敛比较慢，有时候可以通过直接将M步改为直接最大化，考虑如下近似：
+\(\frac{\partial \ell(\theta)}{\partial \theta}=\left.\frac{\partial Q\left(\theta ; \theta^{\prime}\right)}{\partial \theta}\right|_{\theta^{\prime}=\theta}
+\qquad
+\frac{\partial^{2} \ell(\theta)}{\partial \theta \partial \theta^{\mathrm{T}}}=\left.\left\{\frac{\partial^{2} Q\left(\theta ; \theta^{\prime}\right)}{\partial \theta \partial \theta^{\mathrm{T}}}+\frac{\partial^{2} Q\left(\theta ; \theta^{\prime}\right)}{\partial \theta \partial \theta^{\prime} \mathrm{T}}\right\}\right|_{\theta^{\prime}=\theta}\)
+这样就可以直接进行牛顿二阶梯度下降法。</p>
+
+<h1 id="参考资料">参考资料</h1>
+
+<ul>
+  <li><a href="https://www.cambridge.org/core/books/statistical-models/8EC19F80551F52D4C58FAA2022048FC7?__cf_chl_jschl_tk__=aa921ed4560dcaea177e8da320fca59b236ef827-1593743587-0-Aced3me35WQuzFYEtvpkZ_Elir4Gt9CInH2WMwxG_WMgu4KEpsi7sRFlcnKh7V23HK1UMQFiSC5tiTEtuo9sT_C1lnAlJ5k9gVej2S3NqvLdnMPR3JlpJ4tR3sNiaE2m7rCjabSX1l32yLgl6CS83-fxUdQoBmiU6KuWIdy14rAD-SYlV22sSmUD9CxSp5gCS2rnf_ip0AsWuC21P-XuwRh9uZZLDtfqLu4K5kjapJfsT2QB7Beeb2ljamMYfL3vm0t9FUs5S02iNGs89CtSdGA25F3XxEyF9IPVtZlfkvhNFWh-DOxW1JbbsmznYnxyC82lgvqZxQSgnVcwUQXqfWRyzET6iqsyMgG6L19WTHD2H8N74h-Sz18oB3cn-XX9b08yXYm7AKYzvR3NV7eh_f-sL15-pI9aMIZaN-ub2YfW">Statstical Models</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm#:~:text=In%20statistics%2C%20an%20expectation%E2%80%93maximization,depends%20on%20unobserved%20latent%20variables.">Expectation-Maximization algorithm wiki</a></li>
+</ul>
+:ET

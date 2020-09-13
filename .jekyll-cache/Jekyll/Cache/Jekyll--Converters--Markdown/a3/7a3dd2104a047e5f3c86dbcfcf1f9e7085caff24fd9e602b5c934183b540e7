@@ -1,0 +1,105 @@
+I"<h1 id="gibbs-sampler">Gibbs Sampler</h1>
+
+<blockquote>
+  <p>Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/03.pdf" target="_blank">「Bayesian」3 Gibbs Sampler</a>.</p>
+</blockquote>
+
+<p>Gibbs sampler is a generalization of slice sampler. It isn’t limited to the uniform distribution of subgraph.</p>
+
+<p>Gibbs sampler uses the true conditional distributions, <em>full conditional distribution</em>, associated with the target distribution to generate from that distribution.</p>
+
+<h2 id="slice-sampler-vs-gibbs-sampler">Slice Sampler v.s Gibbs Sampler</h2>
+
+<p>Similate an uniform distribution on the set:
+\(\mathscr{S}(f)=\{(x, y, u): 0 \leq u \leq f(x, y)\}\)</p>
+
+<h3 id="algorithm-for-slice-sampler">Algorithm for Slice Sampler</h3>
+
+<p>Move uniformly in one component at a time. Start at a point $(x, y, u)$ in $\mathcal{S}(f)$, we generate</p>
+
+<ol>
+  <li>$X$ along the $x$ -axis from the uniform distribution on $\lbrace x: u \leq f(x, y)\rbrace$</li>
+  <li>$Y$ along the $y$ -axis from the uniform distribution on $\lbrace y: u \leq f\left(x^{\prime}, y\right)\rbrace$</li>
+  <li>$U$ along the $u$ -axis from the uniform distribution on $\left[0, f\left(x^{\prime}, y^{\prime}\right)\right]$</li>
+</ol>
+
+<h3 id="algorithm-for-two-stage-gibbs-sampler">Algorithm for Two-Stage Gibbs Sampler</h3>
+
+<p>Take $X_{0}=x_{0}$. For $t=1,2, \ldots,$ generate</p>
+
+<ol>
+  <li>$Y_{t} \sim f_{Y \mid X}\left(\cdot \mid x_{t-1}\right)$</li>
+  <li>$X_{t} \sim f_{X \mid Y}\left(\cdot \mid y_{t}\right)$</li>
+</ol>
+
+<h3 id="disccusion">Disccusion</h3>
+
+<ol>
+  <li>
+    <p>For slice sampler, if we treat $y$ as constant, then step 1. and step 3. is exactly step 1 in slice sampling, i.e. from $f(x\vert y)=f(x,y)/f(y)\propto f(x,y)$.</p>
+  </li>
+  <li>
+    <p>For slice sampler, the order $x-y-u$ can be changed.</p>
+  </li>
+  <li>
+    <p>For two-stage Gibbs sampler, if $f(x,y)$ satisfies the <em>positive condition</em> the stationary distribution for the chain $X$ is $f(x)$ and the transition density for it is
+\(K\left(x, x^{*}\right)=\int f_{Y \mid X}(y \mid x) f_{X \mid Y}\left(x^{*} \mid y\right) d y\)</p>
+  </li>
+</ol>
+
+<h2 id="em-algorithm-vs-gibbs-sampler">EM Algorithm v.s. Gibbs Sampler</h2>
+
+<p>Consider a pair of random variables $(x,z)$, where $x$ is the observed part and $z$ is the missing part.</p>
+
+<p>Their joint distribution is $f(x,z\vert \theta)$ and $g(x\vert \theta)=\int f(x,z\vert \theta)dz$. Then, the complete-data and imcomplete-data likelehood are:
+\(L^{c}(\theta \mid \mathbf{x}, \mathbf{z})=f(\mathbf{x}, \mathbf{z} \mid \theta) \text { and } L(\theta \mid \mathbf{x})=g(\mathbf{x} \mid \theta)\)
+ The conditional density of missing part is:
+\(k(\mathbf{z} \mid \mathbf{x}, \theta)=\frac{L^{c}(\theta \mid \mathbf{x}, \mathbf{z})}{L(\theta \mid \mathbf{x})}\)</p>
+
+<h3 id="gibbs-sampler-1">Gibbs sampler</h3>
+
+<ol>
+  <li>
+    <p>$\mathbf{z}\vert \theta \sim k(\mathbf{z} \mid \mathbf{x}, \theta)$</p>
+  </li>
+  <li>
+    <p>$\theta\vert \mathbf{z} \propto L^{c}(\theta \mid \mathbf{x}, \mathbf{z})$</p>
+  </li>
+</ol>
+
+<h3 id="em-algorithm">EM Algorithm</h3>
+
+<ol>
+  <li>
+    <p>E-step
+\(h(\theta)=\mathbb{E}_{z}\left[L^{c}(\theta \mid x, z) \mid x, \theta_{t}\right]=\int L^{c}(\theta \mid x, z) k\left(z \mid x, \theta_{t}\right) \mathrm{d} z\)</p>
+  </li>
+  <li>
+    <p>M-step
+\(\theta_{t+1}=\arg \max h(\theta)\)</p>
+  </li>
+</ol>
+
+<h3 id="discussion">Discussion</h3>
+
+<ol>
+  <li>
+    <p>The step 1. of Gibbs sampler and EM algorithm is to deal with $z$.</p>
+
+    <ol>
+      <li>EM algorithm integrals $z$;</li>
+      <li>Gibbs sampler samples $z$.</li>
+    </ol>
+
+    <p>Actually, in EM algorithm, $h(\theta)$ can be viewed as taking average likelihood according to the samples from $z\vert \theta$.</p>
+  </li>
+  <li>
+    <p>The step 2. of Gibbs sampler and EM algorithm is to update $\theta$.</p>
+
+    <ol>
+      <li>EM algorithm find $\theta$ maximize the Q-function;</li>
+      <li>Gibbs sampler samples $\theta$ from the full conditional distribution.</li>
+    </ol>
+  </li>
+</ol>
+:ET

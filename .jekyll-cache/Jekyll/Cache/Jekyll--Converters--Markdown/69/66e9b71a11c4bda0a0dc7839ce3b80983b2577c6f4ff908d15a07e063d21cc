@@ -1,0 +1,102 @@
+I"�<h1 id="slice-sampler">Slice Sampler</h1>
+
+<blockquote>
+  <p>Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/02.pdf" target="_blank">「Bayesian」2 Slice Sampler</a>.</p>
+</blockquote>
+
+<h2 id="simple-slice-sampler">Simple Slice Sampler</h2>
+
+<p>The generation from a distribution with density $f(x)$ is equivalent to uniform generation on the subgraph of $f$,</p>
+
+\[\mathscr{S}(f)=\lbrace(x, u) ; 0 \leq u \leq f(x)\rbrace\]
+
+<p>and $f$ need only be known up to a normalizing constant.</p>
+
+<p>We consider using a <em>random walk</em> on $\mathscr{S}(f)$  and this is slice sampling.</p>
+
+<h3 id="algorithm">Algorithm</h3>
+
+<ol>
+  <li>Move from $(x, u)$ to $\left(x, u^{\prime}\right)$ by</li>
+</ol>
+
+\[u^{\prime} \mid x \sim \text { Uniform }\lbrace(\{u: u \leq f_{1}(x)\}\rbrace\]
+
+<ol>
+  <li>Move from $\left(x, u^{\prime}\right)$ to $\left(x^{\prime}, u^{\prime}\right)$ by</li>
+</ol>
+
+\[x \mid u^{\prime} \sim \text { Uniform }\left(\lbrace x: u^{\prime} \leq f_{1}(x)\rbrace\right)\]
+
+<p><u>Note</u>: The uniform distribution on $\mathscr{S}(f)$ is indeed stationary for both steps. This algorithm will work well only if the exploration of the subgraph of $f_1$ by the corresponding random walk is fast enough.</p>
+
+<h3 id="example">Example</h3>
+
+<h4 id="simple-slice-sampler-1">Simple slice sampler</h4>
+
+<p>Generate from the density $f(x)=(1/2)e^{-\sqrt{x}}\boldsymbol{1}(x&gt;0)$</p>
+
+<ul>
+  <li>$U\vert x \sim \mathcal{U}\left(0, \frac{1}{2} e^{-\sqrt{x}}\right)$;</li>
+  <li>$X\vert u \sim \mathcal{U}\left(0,[\log (2 u)]^{2}\right)$</li>
+</ul>
+
+<h4 id="truncated-normal-distribution">Truncated normal distribution</h4>
+
+<p>Generate from the density  $f(x) \propto f_{1}(x)=\exp \left(-(x+3)^{2} / 2\right) \mathbb{I}_{[0,1]}(x)$</p>
+
+<ul>
+  <li>$U\vert x \sim \mathcal{U}\left(0, \exp \lbrace -(x+3)^{2} / 2\rbrace\right)$</li>
+  <li>$X\vert u\sim\mathcal{U}\lbrace y ; \exp \lbrace-(y+3)^{2} / 2\rbrace \geq u\rbrace\cap[0,1]$</li>
+</ul>
+
+<h2 id="the-general-slice-sampler">The General Slice Sampler</h2>
+
+<p>Expressing the distribution of $u$ is always difficult, it inspires us to find a way to simplify this.</p>
+
+<p>Suppose there is a decomposition of $f$:
+\(f(x) \propto \prod_{i=1}^{k} f_{i}(x)\)</p>
+
+<h3 id="algorithm-1">Algorithm</h3>
+
+<p>At iteration $t+1,$ simulate</p>
+
+<ol>
+  <li>
+    <p>$\omega_{1}^{(t+1)} \sim U_{\left[0, f_{1}\left(x^{(t)}\right)\right]}$</p>
+
+    <p>$\cdots$</p>
+  </li>
+</ol>
+
+<p>​            k. $\omega_{k}^{(t+1)} \sim U_{\left[0, f_{k}\left(x^{(t)}\right)\right]}$</p>
+
+<p>​            k+1. $x^{(t+1)} \sim U_{A^{(t+1)}},$ with
+\(A^{(t+1)}=\left\{y ; f_{i}(y) \geq \omega_{i}^{(t+1)}, i=1, \ldots, k\right\}\)</p>
+
+<p><u>Note</u>: When $f_k$’s are simple, the expressions is tractable, but it happens that the intersection set is small.</p>
+
+<h3 id="example-1">Example</h3>
+
+<h4 id="a-3d-slice-sampler">A 3D slice sampler</h4>
+
+<p>Generate from the density:
+\(f(x)=\exp \left(-x^{2} / 2\right) \times(1+\cos (\pi x)) \times \mathrm{I}(x \in[-0.5,0.5])\)</p>
+
+<ul>
+  <li>Step 1: generate $\omega\vert x$
+    <ul>
+      <li>$\omega_1\sim U[0,\exp(-x^2/2)]$</li>
+      <li>$\omega_2\sim U[0,1+\cos(\pi x)]$</li>
+    </ul>
+  </li>
+  <li>Step 2: generate $x’\vert \omega$
+    <ul>
+      <li>$I_1=[-\sqrt{-2\log(\omega_1)},\sqrt{-2\log(\omega_1)}]$</li>
+      <li>$I_2=[\frac{\arccos(\omega_2’-1)}{\pi},\infty)$</li>
+      <li>$I_3=[-0.5,0.5]$</li>
+      <li>$x’\sim \boldsymbol{1}_{I_1\cap I_2\cap I_3}(x)$</li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,42 @@
+I"�<h1 id="wos-citation-analysis">WoS Citation Analysis</h1>
+
+<h2 id="数据收集的说明">数据收集的说明</h2>
+
+<p><a href="https://www.researchgate.net/publication/220365044_Mapping_the_Backbone_of_Science">Mapping the Backbone of Science</a>里用到的数据是wos里sci和ssci 2000年发表的文章的引用信息，我在网上暂时没有找到公开的已经整理好的数据集。</p>
+
+<ul>
+  <li><a href="https://mjl.clarivate.com/collection-list-downloads">WOS Collection List</a> 和 <a href="http://fhyxa7c727d884744f15a180f8aa826e027cswpuwu5ok9v6o6oqx.fcfb.libproxy.ruc.edu.cn/JCRJournalHomeAction.action#">WOS JCR</a> 有截至2020年的期刊汇总。</li>
+  <li><a href="http://fhyxa7c727d884744f15a180f8aa826e027cswpuwu5ok9v6o6oqx.fcfb.libproxy.ruc.edu.cn/JCRJournalHomeAction.action#">WOS JCR</a> 里点进具体的期刊<a href="[http://fhyxd70aa7ecb75b499faadc5662f40791aaswpuwu5ok9v6o6oqx.fcfb.libproxy.ruc.edu.cn/jif/home/?journal=NAT%20REV%20CHEM&amp;year=2019&amp;editions=SCIE&amp;pssid=H1-upPjEjnj3XgwIsj94a4GzU4x2BxxR3KyfCxx-18x2d6qKNhtEfrbAa4tn0JGiq6Ax3Dx3DOUwW8UZ8UOyy7evR7ZhQgAx3Dx3D-WwpRYkX4Gz8e7T4uNl5SUQx3Dx3D-wBEj1mx2B0mykql8H4kstFLwx3Dx3D](http://fhyxd70aa7ecb75b499faadc5662f40791aaswpuwu5ok9v6o6oqx.fcfb.libproxy.ruc.edu.cn/jif/home/?journal=NAT REV CHEM&amp;year=2019&amp;editions=SCIE&amp;pssid=H1-upPjEjnj3XgwIsj94a4GzU4x2BxxR3KyfCxx-18x2d6qKNhtEfrbAa4tn0JGiq6Ax3Dx3DOUwW8UZ8UOyy7evR7ZhQgAx3Dx3D-WwpRYkX4Gz8e7T4uNl5SUQx3Dx3D-wBEj1mx2B0mykql8H4kstFLwx3Dx3D)">WOS Example</a>，里面会有Journal Relationship来展示和其他期刊的引用和被引用的关系，但是没有方便分析的原始数据。</li>
+  <li><a href="https://github.com/tomleung1996/wos_crawl">WOS_Crawler</a> 提供了根据期刊名爬取wos文章数据的方法，但是有时候会因为访问权限的问题会报错。确定了需要用到的数据集的范围(年份，范围)以后，可以再改一改，得到需要的信息。</li>
+  <li><a href="https://mp.weixin.qq.com/s/XdZrUx22jwhJPkcDOnzrrw">python爬取WOS数据</a>里有上述工具和rwos，wosr(直接调用WOS API)的使用指南，可以根据需求选取。</li>
+  <li>还有一个可能的获取数据的途径就是直接向WOS进行申请，详见 <a href="https://doi.org/10.1162/qss_a_00018">Web of Science as a data source for research on scientific and scholarly activity  </a>。</li>
+</ul>
+
+<h2 id="一些需要注意的问题">一些需要注意的问题</h2>
+
+<ul>
+  <li><a href="https://www.researchgate.net/publication/220365044_Mapping_the_Backbone_of_Science">Mapping the Backbone of Science</a> 中提出，JCR中的数据无法分析inter-citing 和 co-citing ，因此选用了对文章的原始数据进行分析的的方法。</li>
+  <li><a href="https://harzing.com/publications/white-papers/google-scholar-a-new-data-source-for-citation-analysis">Google Scholar - A new data source for citation analysis</a> 提出现在用Google Scholar 中的数据，并比较了他与Web of Science 中数据的优劣。</li>
+</ul>
+
+<h2 id="其他点">其他点</h2>
+
+<ul>
+  <li><a href="http://cluster.ischool.drexel.edu/~cchen/citespace/doc/tutorial/how_to/1.download_from_WOS.pdf">How to download Web of Science data for Bibliometrics Research</a> 是一份如何手动下载引用数据的使用指南，可以帮助理解字段的意思以及如何去对<a href="https://github.com/tomleung1996/wos_crawl">WOS_Crawler</a> 进行修改，得到自己想要的指标。</li>
+  <li><a href="https://grants.nih.gov/grants/km/oerrm/oer_km_events/borner.pdf">Mapping the Structure and Evolution of Science</a> 总结了近些年部分network data可视化的工作以及列出了一些常用的数据集。</li>
+  <li><a href="https://doi.org/10.1371/journal.pone.0004803">Clickstream Data Yields High-Resolution Maps of Science</a> 不再使用citation之间的关系，而是使用log data。</li>
+</ul>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li><a href="http://apps.webofknowledge.com/UA_GeneralSearch_input.do?product=UA&amp;search_mode=GeneralSearch&amp;SID=7CROEqv8cv1x71Ns9tb&amp;preferencesSaved=">WOS website</a></li>
+  <li><a href="https://mp.weixin.qq.com/s/XdZrUx22jwhJPkcDOnzrrw">python爬取WOS数据</a></li>
+  <li><a href="https://github.com/tomleung1996/wos_crawl">WOS_Crawler</a></li>
+  <li><a href="https://doi.org/10.1371/journal.pone.0004803">Clickstream Data Yields High-Resolution Maps of Science</a></li>
+  <li><a href="https://grants.nih.gov/grants/km/oerrm/oer_km_events/borner.pdf">Mapping the Structure and Evolution of Science</a></li>
+  <li><a href="http://cluster.ischool.drexel.edu/~cchen/citespace/doc/tutorial/how_to/1.download_from_WOS.pdf">How to download Web of Science data for Bibliometrics Research</a></li>
+  <li><a href="https://www.researchgate.net/publication/220365044_Mapping_the_Backbone_of_Science">Mapping the Backbone of Science</a></li>
+  <li><a href="https://harzing.com/publications/white-papers/google-scholar-a-new-data-source-for-citation-analysis">Google Scholar - A new data source for citation analysis</a></li>
+</ul>
+:ET
