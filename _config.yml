@@ -60,7 +60,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_share:true
+#disqus_share:true
 disqus_username: Linsui Deng
 
 # Netease settings
@@ -81,7 +81,7 @@ netease_comment: false
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "For the next quantum leap<br> update"
-sidebar-avatar: img/denglinsui.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/denglinsui.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -100,7 +100,6 @@ service-worker: true
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
-markdown: kramdown
 
 # Friends
 friends: [
