@@ -1,2 +1,2 @@
-# reading note
- This repo records my reading notes.
+This blog is built for recording my reading notes. 
+

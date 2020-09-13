@@ -1,0 +1,86 @@
+FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU van Doorn, J
+   Ly, A
+   Marsman, M
+   Wagenmakers, EJ
+AF van Doorn, Johnny
+   Ly, Alexander
+   Marsman, Maarten
+   Wagenmakers, Eric-Jan
+TI Bayesian Inference for Kendall's Rank Correlation Coefficient
+SO AMERICAN STATISTICIAN
+LA English
+DT Article
+DE Bayes factor; Kendall's tau; Nonparametric inference
+ID TESTS; TAU
+AB This article outlines a Bayesian methodology to estimate and test the Kendall rank correlation coefficient tau. The nonparametric nature of rank data implies the absence of a generative model and the lack of an explicit likelihood function. These challenges can be overcome by modeling test statistics rather than data. We also introduce a method for obtaining a default prior distribution. The combined result is an inferential methodology that yields a posterior distribution for Kendall's tau.
+C1 [van Doorn, Johnny; Ly, Alexander; Marsman, Maarten; Wagenmakers, Eric-Jan] Univ Amsterdam, Dept Psychol Methods, Valckeniersstr 59, NL-1018 XE Amsterdam, Netherlands.
+RP van Doorn, J (corresponding author), Univ Amsterdam, Dept Psychol Methods, Valckeniersstr 59, NL-1018 XE Amsterdam, Netherlands.
+EM J.B.vanDoorn@uva.nl
+RI Wagenmakers, Eric-Jan/AAH-7065-2019
+OI Wagenmakers, Eric-Jan/0000-0003-1596-1034; van Doorn,
+   Johnny/0000-0003-0270-096X; Ly, Alexander/0000-0003-3925-3833
+FU European Science Foundation (ERC) [283876]; Netherlands Organization for
+   Scientific ResearchNetherlands Organization for Scientific Research
+   (NWO)
+FX The authors acknowledge support from the European Science Foundation
+   (ERC grant 283876) and the Netherlands Organization for Scientific
+   Research.
+CR Berger JO, 2008, ANN STAT, V36, P963, DOI 10.1214/07-AOS501
+   Borgwardt KM, 2009, ARXIV09064032
+   Chen YH, 2014, COMPUT STAT DATA AN, V71, P335, DOI 10.1016/j.csda.2012.11.003
+   CHERNOFF H, 1958, ANN MATH STAT, V29, P972, DOI 10.1214/aoms/1177706436
+   Colonius H, 2016, J MATH PSYCHOL, V74, P2, DOI 10.1016/j.jmp.2016.02.004
+   DICKEY JM, 1970, ANN MATH STAT, V41, P214, DOI 10.1214/aoms/1177697203
+   Ferguson TS, 2000, CAN J STAT, V28, P587, DOI 10.2307/3315967
+   Gelman A, 2003, BAYESIAN DATA ANAL
+   Genest C, 2007, J HYDROL ENG, V12, P347, DOI 10.1061/(ASCE)1084-0699(2007)12:4(347)
+   Greiner R., 1909, Z MATH PHYS, V57, P121
+   GRIFFIN HD, 1958, J AM STAT ASSOC, V53, P441, DOI 10.2307/2281866
+   HOEFFDING W, 1948, ANN MATH STAT, V19, P293, DOI 10.1214/aoms/1177730196
+   Holmes CC, 2015, BAYESIAN ANAL, V10, P297, DOI 10.1214/14-BA914
+   Hotelling H, 1936, ANN MATH STAT, V7, P29, DOI 10.1214/aoms/1177732543
+   Jeffreys H., 1961, THEORY PROBABILITY
+   Johnson VE, 2005, J R STAT SOC B, V67, P689, DOI 10.1111/j.1467-9868.2005.00521.x
+   KASS RE, 1995, J AM STAT ASSOC, V90, P773, DOI 10.1080/01621459.1995.10476572
+   Kendall M., 1990, RANK CORRELATION MET
+   Kendall MG, 1938, BIOMETRIKA, V30, P81, DOI 10.2307/2332226
+   KRUSKAL WH, 1958, J AM STAT ASSOC, V53, P814, DOI 10.2307/2281954
+   Labadi L. A., 2014, ARXIV14113427
+   Ly A, 2016, J MATH PSYCHOL, V72, P19, DOI 10.1016/j.jmp.2015.06.004
+   Nelsen RB, 2006, INTRO COPULAS
+   NOETHER GE, 1955, ANN MATH STAT, V26, P64, DOI 10.1214/aoms/1177728593
+   Randles R. H., 1979, SPRINGER TEXTS STAT
+   Serfling R. J., 1980, APPROXIMATION THEORE
+   Wagenmakers EJ, 2010, COGNITIVE PSYCHOL, V60, P158, DOI 10.1016/j.cogpsych.2009.12.001
+   Wasserman L, 2006, SPRINGER TEXTS STAT
+   WILLERMAN L, 1991, INTELLIGENCE, V15, P223, DOI 10.1016/0160-2896(91)90031-8
+   Yuan Y, 2008, STAT SINICA, V18, P1185
+NR 30
+TC 15
+Z9 15
+U1 0
+U2 7
+PU AMER STATISTICAL ASSOC
+PI ALEXANDRIA
+PA 732 N WASHINGTON ST, ALEXANDRIA, VA 22314-1943 USA
+SN 0003-1305
+EI 1537-2731
+J9 AM STAT
+JI Am. Stat.
+PY 2018
+VL 72
+IS 4
+BP 303
+EP 308
+DI 10.1080/00031305.2016.1264998
+PG 6
+WC Statistics & Probability
+SC Mathematics
+GA HC8LL
+UT WOS:000452054400001
+OA Bronze
+DA 2020-07-31
+ER
