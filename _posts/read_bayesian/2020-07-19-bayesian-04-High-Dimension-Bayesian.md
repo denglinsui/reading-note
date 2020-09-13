@@ -4,7 +4,6 @@ subtitle: "High-Dimensional Bayesian - Bayesian Lasso/Bayesian Roubust Regressio
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Bayesian
   - Course

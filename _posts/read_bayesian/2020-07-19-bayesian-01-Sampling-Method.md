@@ -4,7 +4,6 @@ subtitle: "Sampling Method - Rejection/MH/Langenvin/HMC/Stochastic HMC"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Bayesian
   - Course

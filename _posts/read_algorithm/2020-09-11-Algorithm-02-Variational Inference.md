@@ -4,7 +4,6 @@ subtitle: "Variational Inference - Variational Inference"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Algorithm
   - 笔记

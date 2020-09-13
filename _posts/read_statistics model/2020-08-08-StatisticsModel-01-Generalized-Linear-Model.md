@@ -4,7 +4,6 @@ subtitle: "Generalized Linear Model - Link function/Estimation/Inference"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Statistics Model
   - Course

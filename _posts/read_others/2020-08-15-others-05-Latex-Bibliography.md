@@ -4,7 +4,6 @@ subtitle: "Latex Bibliography - BibTeX"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Latex
   - Others

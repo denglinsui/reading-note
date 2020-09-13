@@ -4,7 +4,6 @@ subtitle: "Data for Multiple Testing - Multiple Testing"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Data
   - Others

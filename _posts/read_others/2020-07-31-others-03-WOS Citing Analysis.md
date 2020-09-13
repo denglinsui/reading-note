@@ -4,7 +4,6 @@ subtitle: "WoS Citation Analysis - Data Collection"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Paper
   - Others

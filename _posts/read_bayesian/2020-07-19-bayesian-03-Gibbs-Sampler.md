@@ -4,7 +4,6 @@ subtitle: "Gibbs Sampler - A view from Slice Sampler"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Bayesian
   - Course

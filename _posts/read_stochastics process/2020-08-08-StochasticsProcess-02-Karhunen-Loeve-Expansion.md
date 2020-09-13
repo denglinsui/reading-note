@@ -4,7 +4,6 @@ subtitle: "Karhunen-Loeve Expansion - Principle Component/Expansion along eigenf
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 mathjax: true
 tags:
   - Stochastics Process

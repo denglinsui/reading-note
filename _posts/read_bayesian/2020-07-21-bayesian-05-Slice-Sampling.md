@@ -4,7 +4,6 @@ subtitle: "Slice Sampling - Implication"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Bayesian
   - R language

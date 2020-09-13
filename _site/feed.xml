@@ -3,10 +3,10 @@
   <channel>
     <title>Reading Note</title>
     <description>关于统计与学习 | 邓淋穗，ph.d candiadate| 这里是 @Linsui邓淋穗 的读书笔记。</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Sep 2020 20:34:33 +0800</pubDate>
-    <lastBuildDate>Sun, 13 Sep 2020 20:34:33 +0800</lastBuildDate>
+    <link>http://localhost:4000/reading-note/</link>
+    <atom:link href="http://localhost:4000/reading-note/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 13 Sep 2020 21:21:36 +0800</pubDate>
+    <lastBuildDate>Sun, 13 Sep 2020 21:21:36 +0800</lastBuildDate>
     <generator>Jekyll v4.1.1</generator>
     
       <item>
@@ -18,8 +18,8 @@
 &lt;p&gt;Most content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01~04&lt;/code&gt; describes the continuous stochastics process, coming from the contents of the Statistics Process course(2020 Spring) in &lt;a href=&quot;http://isbd.ruc.edu.cn/&quot;&gt;INSTITUTE OF STATISTICS AND BIG DATA, RUC&lt;/a&gt; and &lt;a href=&quot;https://www.amazon.com/Stationary-Stochastic-Processes-Applications-Statistical/dp/1466557796&quot;&gt;Stationary Stochastic Processes&lt;/a&gt; of &lt;a href=&quot;http://www.maths.lth.se/matstat/staff/georg/&quot;&gt;Georg Lindgren&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/StochasticsProcess-00-Introduction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/StochasticsProcess-00-Introduction/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/StochasticsProcess-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/StochasticsProcess-00-Introduction/</guid>
         
         <category>Statistics Model</category>
         
@@ -37,8 +37,8 @@
 &lt;p&gt;Most content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01~03&lt;/code&gt; comes from the contents of the Statistical Model course(2020 Spring) in &lt;a href=&quot;http://isbd.ruc.edu.cn/&quot;&gt;INSTITUTE OF STATISTICS AND BIG DATA, RUC&lt;/a&gt; and &lt;a href=&quot;https://www.cambridge.org/core/books/statistical-models/8EC19F80551F52D4C58FAA2022048FC7?__cf_chl_jschl_tk__=aa921ed4560dcaea177e8da320fca59b236ef827-1593743587-0-Aced3me35WQuzFYEtvpkZ_Elir4Gt9CInH2WMwxG_WMgu4KEpsi7sRFlcnKh7V23HK1UMQFiSC5tiTEtuo9sT_C1lnAlJ5k9gVej2S3NqvLdnMPR3JlpJ4tR3sNiaE2m7rCjabSX1l32yLgl6CS83-fxUdQoBmiU6KuWIdy14rAD-SYlV22sSmUD9CxSp5gCS2rnf_ip0AsWuC21P-XuwRh9uZZLDtfqLu4K5kjapJfsT2QB7Beeb2ljamMYfL3vm0t9FUs5S02iNGs89CtSdGA25F3XxEyF9IPVtZlfkvhNFWh-DOxW1JbbsmznYnxyC82lgvqZxQSgnVcwUQXqfWRyzET6iqsyMgG6L19WTHD2H8N74h-Sz18oB3cn-XX9b08yXYm7AKYzvR3NV7eh_f-sL15-pI9aMIZaN-ub2YfW&quot;&gt;Statstical Models&lt;/a&gt; of &lt;a href=&quot;https://scholar.google.com/citations?user=ocIDAto2lksC&amp;amp;hl=en&quot;&gt;A. C. Davison&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/StatisticsModel-00-Introduction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/StatisticsModel-00-Introduction/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/StatisticsModel-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/StatisticsModel-00-Introduction/</guid>
         
         <category>Statistics Model</category>
         
@@ -54,8 +54,8 @@
 &lt;p&gt;This part involves some notes about, but not limited to, WOS, Latex, Data etc.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/others-00-Introduction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/others-00-Introduction/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/others-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/others-00-Introduction/</guid>
         
         <category>Others</category>
         
@@ -75,8 +75,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/concept-01-Confounders/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/concept-01-Confounders/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/concept-01-Confounders/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/concept-01-Confounders/</guid>
         
         <category>Concept</category>
         
@@ -90,8 +90,8 @@
 &lt;p&gt;This part involves some basic concepts in statistics which are relatively independent and easily clarified if I don’t go deeper in the corresponding filed.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/concept-00-Introduction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/concept-00-Introduction/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/concept-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/concept-00-Introduction/</guid>
         
         <category>Concept</category>
         
@@ -109,8 +109,8 @@
 &lt;p&gt;Most content of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;01~05&lt;/code&gt; comes from the lecture notes of the Bayesian course(2020 Spring) in &lt;a href=&quot;http://isbd.ruc.edu.cn/&quot;&gt;INSTITUTE OF STATISTICS AND BIG DATA, RUC&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/bayesian-00-Introduction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/bayesian-00-Introduction/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/bayesian-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/bayesian-00-Introduction/</guid>
         
         <category>Bayesian</category>
         
@@ -128,8 +128,8 @@
 &lt;p&gt;Since there are abundant comprehensive tutorials about these algorithm, the notes are structured in the manner that easily picked by me.&lt;/p&gt;
 </description>
         <pubDate>Sun, 13 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/13/Algorithm-00-Introduction/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/13/Algorithm-00-Introduction/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/13/Algorithm-00-Introduction/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/13/Algorithm-00-Introduction/</guid>
         
         <category>Algorithm</category>
         
@@ -248,8 +248,8 @@
 
 </description>
         <pubDate>Fri, 11 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/11/Algorithm-02-Variational-Inference/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/11/Algorithm-02-Variational-Inference/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/11/Algorithm-02-Variational-Inference/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/11/Algorithm-02-Variational-Inference/</guid>
         
         <category>Algorithm</category>
         
@@ -281,8 +281,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 10 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/10/others-06-Data-Data-for-Multiple-Testing/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/10/others-06-Data-Data-for-Multiple-Testing/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/10/others-06-Data-Data-for-Multiple-Testing/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/10/others-06-Data-Data-for-Multiple-Testing/</guid>
         
         <category>Data</category>
         
@@ -347,8 +347,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 10 Sep 2020 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/</guid>
+        <link>http://localhost:4000/reading-note/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/</link>
+        <guid isPermaLink="true">http://localhost:4000/reading-note/2020/09/10/Algorithm-01-EM-Algorithm-%E5%89%AF%E6%9C%AC/</guid>
         
         <category>Algorithm</category>
         

@@ -4,7 +4,6 @@ subtitle: "Count Data - Poisson v.s. Binomial/Contingency Tables"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Statistics Model
   - Course

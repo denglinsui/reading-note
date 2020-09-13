@@ -4,7 +4,6 @@ subtitle: "Overdispersion - Definition/Ways of solving/Quasi-likelihood"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Statistics Model
   - Course

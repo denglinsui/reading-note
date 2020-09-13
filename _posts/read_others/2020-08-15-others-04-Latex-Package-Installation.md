@@ -4,7 +4,6 @@ subtitle: "Latex Pakage Installation - Manual"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Latex
   - Others

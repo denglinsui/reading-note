@@ -4,7 +4,6 @@ subtitle: "Confounding - a casual concept"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Concept
 ---

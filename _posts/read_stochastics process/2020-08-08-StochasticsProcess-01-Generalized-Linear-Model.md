@@ -4,7 +4,6 @@ subtitle: "Linear Filter - Time Field/Spectrum Field/Differential Equations/Whit
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 mathjax: true
 tags:
   - Stochastics Process

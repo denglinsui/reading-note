@@ -4,7 +4,6 @@ subtitle: "Slice Sampler - Simpler/General and examples"
 layout: post
 author: "Linsui"
 header-style: text
-hidden: true
 tags:
   - Bayesian
   - Course
