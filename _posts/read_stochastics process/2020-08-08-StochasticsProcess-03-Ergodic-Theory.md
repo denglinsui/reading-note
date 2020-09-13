@@ -4,6 +4,7 @@ subtitle: "Ergodic Theory - Transformation View/Process View"
 layout: post
 author: "Linsui"
 header-style: text
+mathjax: true
 hidden: true
 tags:
   - Stochastics Process

@@ -5,6 +5,7 @@ layout: post
 author: "Linsui"
 header-style: text
 hidden: true
+mathjax: true
 tags:
   - Statistics Model
   - Introduction
