@@ -16,9 +16,9 @@ In another word, the relationship between independent variable and dependent var
 
 There are several types:
 
-1. Operational confounding
-2. Procedural confounding
-3. Person confounding
+1. Operational confounding: Experiment design;
+2. Procedural confounding: incorrect operation;
+3. Person confounding: population structure.
 
 # Example
 
