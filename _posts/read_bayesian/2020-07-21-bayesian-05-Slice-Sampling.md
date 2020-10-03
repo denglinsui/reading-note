@@ -11,7 +11,7 @@ tags:
   - 笔记
 ---
 
-# Slice Sampling: Implication
+# Slice Sampling: Implementation
 
 Library Pakages:
 
