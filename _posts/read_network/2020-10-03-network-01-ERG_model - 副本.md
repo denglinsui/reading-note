@@ -10,7 +10,7 @@ tags:
 
 # Erdős–Rényi-Gilbert Random Graph Model
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Network/01.pdf" target="_blank">「Network」1 Erdős–Rényi-Gilbert Random Graph Model</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Network/01.pdf" target="_blank">「Network」1 Erdős–Rényi-Gilbert Random Graph Model</a>.
 
 ## Background
 

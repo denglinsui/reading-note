@@ -12,7 +12,7 @@ tags:
 
 # Gibbs Sampler
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/03.pdf" target="_blank">「Bayesian」3 Gibbs Sampler</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Bayesian/03.pdf" target="_blank">「Bayesian」3 Gibbs Sampler</a>.
 
 Gibbs sampler is a generalization of slice sampler. It isn't limited to the uniform distribution of subgraph. 
 

@@ -13,7 +13,7 @@ tags:
 
 # Linear filters	
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/01.pdf" target="_blank">「Stochastics Process」1 Linear Filters</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/StochasticsProcess/01.pdf" target="_blank">「Stochastics Process」1 Linear Filters</a>.
 
 ## Linear time invariant filters
 

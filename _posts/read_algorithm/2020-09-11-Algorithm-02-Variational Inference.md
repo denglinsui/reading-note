@@ -11,7 +11,7 @@ tags:
 
 # Variational Inference
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Algorithm/02.pdf" target="_blank">「Algorithm」2 Variational Inference</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Algorithm/02.pdf" target="_blank">「Algorithm」2 Variational Inference</a>.
 >
 
 ## 背景

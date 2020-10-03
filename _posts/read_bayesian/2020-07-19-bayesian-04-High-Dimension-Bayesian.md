@@ -12,7 +12,7 @@ tags:
 
 # High-Dimensional Bayesian
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/04.pdf" target="_blank">「Bayesian」4 High-Dimensional Bayesian</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Bayesian/04.pdf" target="_blank">「Bayesian」4 High-Dimensional Bayesian</a>.
 
 ## Bayesian Lasso
 

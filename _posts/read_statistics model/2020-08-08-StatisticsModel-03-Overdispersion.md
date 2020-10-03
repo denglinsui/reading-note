@@ -12,7 +12,7 @@ tags:
 
 # Overdispersion
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StatisticsModel/03.pdf" target="_blank">「Statistics Model」3 Overdispersion</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/StatisticsModel/03.pdf" target="_blank">「Statistics Model」3 Overdispersion</a>.
 
 ## Definition
 

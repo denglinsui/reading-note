@@ -12,7 +12,7 @@ tags:
 
 # Sampling Method
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/01.pdf" target="_blank">「Bayesian」1 Sampling Method</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Bayesian/01.pdf" target="_blank">「Bayesian」1 Sampling Method</a>.
 >
 
 ## Rejection Sampling

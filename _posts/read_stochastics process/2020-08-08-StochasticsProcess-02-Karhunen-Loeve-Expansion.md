@@ -13,7 +13,7 @@ tags:
 
 # Karhunen-Loeve Expansion
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/02.pdf" target="_blank">「Stochastics Process」2 Karhunen-Loeve Expansion</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/StochasticsProcess/02.pdf" target="_blank">「Stochastics Process」2 Karhunen-Loeve Expansion</a>.
 
 ## Linear time invariant filters
 

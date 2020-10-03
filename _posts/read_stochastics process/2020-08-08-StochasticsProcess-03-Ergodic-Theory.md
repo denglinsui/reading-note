@@ -13,7 +13,7 @@ tags:
 
 # Ergodic Theory
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/03.pdf" target="_blank">「Stochastics Process」3 Ergodic Theory</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/StochasticsProcess/03.pdf" target="_blank">「Stochastics Process」3 Ergodic Theory</a>.
 
 Ergodicity describes the phenomenon that the time average of one relization (sample path) of stationary process converges to the expectation of it at $t=0$. It transforms a probabilistic problem to a deterministic problem.
 

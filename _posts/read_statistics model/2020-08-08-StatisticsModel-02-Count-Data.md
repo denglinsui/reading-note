@@ -12,7 +12,7 @@ tags:
 
 # Count Data
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StatisticsModel/02.pdf" target="_blank">「Statistics Model」2 Count Data</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/StatisticsModel/02.pdf" target="_blank">「Statistics Model」2 Count Data</a>.
 
 The count data comes from Poisson:
 $$

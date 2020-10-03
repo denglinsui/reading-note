@@ -13,7 +13,7 @@ tags:
 
 # Mixing and Asymptotic Independence
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/StochasticsProcess/03.pdf" target="_blank">Stochastics Process」4 Mixing and Asymptotic Independence</a>. 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/StochasticsProcess/03.pdf" target="_blank">Stochastics Process」4 Mixing and Asymptotic Independence</a>. 
 
 In this part, we care about:
 

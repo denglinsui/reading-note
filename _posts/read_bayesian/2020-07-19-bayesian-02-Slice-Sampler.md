@@ -12,7 +12,7 @@ tags:
 
 # Slice Sampler
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Bayesian/02.pdf" target="_blank">「Bayesian」2 Slice Sampler</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Bayesian/02.pdf" target="_blank">「Bayesian」2 Slice Sampler</a>.
 
 ## Simple Slice Sampler
 

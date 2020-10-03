@@ -11,7 +11,7 @@ tags:
 
 # EM Algorithm
 
-> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Algorithm/01.pdf" target="_blank">「Algorithm」1 EM Algorithm</a>.
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Algorithm/01.pdf" target="_blank">「Algorithm」1 EM Algorithm</a>.
 >
 
 ## 背景
