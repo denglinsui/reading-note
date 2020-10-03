@@ -1,11 +1,12 @@
 ---
 title: "「Others」6 Data for Network"
-subtitle: "Data for Multiple Testing - Multiple Testing"
+subtitle: "Data for Network - Network"
 layout: post
 author: "Linsui"
 header-style: text
 tags:
   - Data
+  - Network
   - Others
 ---
 
