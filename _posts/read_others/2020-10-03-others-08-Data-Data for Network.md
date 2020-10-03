@@ -94,4 +94,4 @@ There are 2,037 authors and 1,740 papers with an average of 2.29 authors per pap
 
 # Reference
 
--  [A survey of statistical network](clarivate.com/webofsciencegroup/solutions/journal-citation-reports/)
+-  [A survey of statistical network](https://arxiv.org/abs/0912.5410)

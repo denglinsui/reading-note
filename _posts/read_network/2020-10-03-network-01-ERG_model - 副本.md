@@ -8,7 +8,11 @@ tags:
   - Network
 ---
 
-# Background
+# Erdős–Rényi-Gilbert Random Graph Model
+
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/pdf/Network/01.pdf" target="_blank">「Network」1 Erdős–Rényi-Gilbert Random Graph Model</a>.
+
+## Background
 
 The Erdős–Rényi model was firstly introduced by [Paul Erdős](https://en.wikipedia.org/wiki/Paul_Erdős) and [Alfréd Rényi](https://en.wikipedia.org/wiki/Alfréd_Rényi) in 1959, while [Edgar Gilbert](https://en.wikipedia.org/wiki/Edgar_Gilbert) introduced the other model contemporaneously and independently of Erdős and Rényi.
 
@@ -17,16 +21,16 @@ The underlying ideas for them are respectively:
 - Erdős and Rényi: All graphs on a fixed vertex set with a fixed number of edges are equally likely;
 - Gilbert: Each edge has a fixed probability of being present or absent, independently of the other edges. 
 
-# Model
+## Model
 
-## Erdős and Rényi 
+### Erdős and Rényi 
 
 The network is denoted as $G(N,E)$ because they assumed the number of nodes and edges are fixed. 
 
 - An undirected graph involving $N$ nodes and a fixed number of edges, $E$, chosen randomly from the $\left(\begin{array}{c}N \\ 2\end{array}\right)$ possible edges in the graph. 
 - All $\left(\begin{array}{c}\left(\begin{array}{c}N \\ 2\end{array}\right) \\ E\end{array}\right)$ graphs are equally likely.
 
-## Gilbert
+### Gilbert
 
 The network is denoted as $G(N,E)$ because Gilbert assumed the number of nodes and the probability of each edge existing is fixed. 
 $$
@@ -40,7 +44,7 @@ $$
 \ell(Y \mid p)=\prod_{i \neq j} p^{Y_{i j}}(1-p)^{1-Y_{i j}}
 $$
 
-# Properties
+## Properties
 
 When considering asymptotic behavior is the value of $\lambda=pN$:
 

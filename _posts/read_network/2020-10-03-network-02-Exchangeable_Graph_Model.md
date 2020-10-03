@@ -1,7 +1,7 @@
 ---
 title: "「Network」2 Exchangeable Graph Model"
 subtitle: "Random Graph Model - Exchangeable Graph Model"
-layout: hidden
+layout: page
 author: "Linsui"
 header-style: text
 tags:
@@ -18,4 +18,4 @@ tags:
 
 # Reference
 
--  [A survey of statistical network](clarivate.com/webofsciencegroup/solutions/journal-citation-reports/)
+-  [A survey of statistical network](https://arxiv.org/abs/0912.5410)
