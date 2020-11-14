@@ -6,7 +6,10 @@ author: "Linsui"
 header-style: text
 tags:
   - Network
+
 ---
+
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Network/02.pdf" target="_blank">「Network」2 ERGMs - Exponential random graph models</a>.
 
 # Background
 
