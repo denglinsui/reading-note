@@ -18,6 +18,7 @@ tags:
   -  `save.image(file = "Main_Test.RData")`
 - Still Running after disconnected: 
   - ` nohup Rscript test.R >./log/print.log 2>./log/error.log &`
+- !`diag(c())=matrix`; `diag(matrix)=c`; `diag(matrix)!=diagmatrix`
 
 # Linux
 
