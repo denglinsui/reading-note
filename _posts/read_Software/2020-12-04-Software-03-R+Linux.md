@@ -19,6 +19,7 @@ tags:
 - Still Running after disconnected: 
   - ` nohup Rscript test.R >./log/print.log 2>./log/error.log &`
 - !`diag(c())=matrix`; `diag(matrix)=c`; `diag(matrix)!=diagmatrix`
+- When saving pdf works in console implement but fails in `cmd` or `Source`, try to `print(obj)` before `dev.off()` other than just use `obj`.  
 
 # Linux
 
