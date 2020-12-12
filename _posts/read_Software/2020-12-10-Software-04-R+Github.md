@@ -1,12 +1,13 @@
 ---
-title: "「Software」4 R language"
-subtitle: "R language - Some Basic Tips"
+title: "「Software」4 R language/Github"
+subtitle: "R language/Github - Some Basic Tips"
 layout: post
 author: "Linsui"
 header-style: text
 tags:
   - R language  
   - 笔记
+
 ---
 
 # R
@@ -48,3 +49,38 @@ tags:
 
   - `p+exhange` is the row split method
   - `rho` is the column split method
+
+# Github
+
+## Tips
+
+- Deploy github authority on Linux:
+
+  - Create `ssh` folder:
+
+    ```cmd
+    mkdir ~/.ssh
+    ```
+
+  - Generate and copy the ssh key:
+
+    ```cmd
+    ssh-keygen -t rsa -C "email_name@email_server.com"
+    ```
+
+    ```cmd
+     cat id_rsa.pub
+    ```
+
+  - Log in github.com -> `Setting` -> `SSH and GPG keys`
+
+    - `New SSH keys` 
+    - paste ssh key you generated
+
+  - Add config
+
+    ```cmd
+    git config --global user.name "name" 
+    ```
+
+    

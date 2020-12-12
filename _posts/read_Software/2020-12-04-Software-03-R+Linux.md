@@ -37,3 +37,5 @@ tags:
   - Whole folder
     - `scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）`
     - `scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录）`
+- Fast searching:
+  - `ctrl +R`
