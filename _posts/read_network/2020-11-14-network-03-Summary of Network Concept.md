@@ -1,5 +1,5 @@
 ---
-title: "「Network」2 Summary of Network Concept"
+title: "「Network」3 Summary of Network Concept"
 subtitle: "Summary of Network Concept - Some Basic Concept"
 layout: post
 author: "Linsui"
