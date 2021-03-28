@@ -83,4 +83,14 @@ tags:
     git config --global user.name "name" 
     ```
 
-    
+- After that, we still cannot use `git pull` directly. We should change the updating version `http:` to version `scp` by
+
+  ```cmd
+  git remote -v #check the updating
+  git remote set-url origin git@github.com:githubname/project.git
+  git remote -v #check whether the updating changed
+  ```
+
+# Reference
+
+- [Managing remote repositories](https://docs.github.com/en/github/getting-started-with-github/managing-remote-repositories)
