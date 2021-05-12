@@ -8,6 +8,8 @@ tags:
   - Network
 ---
 
+> Since there are some problems about mathjax, I also upload the pdf version <a href="https://denglinsui.github.io/reading-note/pdf/Network/04.pdf" target="_blank">「Network」4 Network Distance</a>.
+
 # Structural Distance
 
 Structural distance captures local changes. It suites to data where local changes can induce radical changes.
