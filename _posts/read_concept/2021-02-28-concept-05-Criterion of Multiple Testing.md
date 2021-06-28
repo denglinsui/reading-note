@@ -52,3 +52,4 @@ plot(simu)
 
 -  [False Discovery Control for Random Fields](https://doi.org/10.1198/0162145000001655)
 -  [Plotting realisations of random Gaussian fields using RandomFields package results in blank graph. Why?](https://stackoverflow.com/questions/43094652/plotting-realisations-of-random-gaussian-fields-using-randomfields-package-resul)
+
